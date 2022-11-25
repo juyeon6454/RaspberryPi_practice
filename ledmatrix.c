@@ -61,6 +61,7 @@ int main(void)
         close(fbfd);
 
         return EXIT_SUCCESS;
+<<<<<<< HEAD
 
 
 
@@ -68,6 +69,8 @@ int main(void)
 
 
        
+=======
+>>>>>>> 390e9333d0e679f5ddc2b6b1d804c56374ec76fb
 }
 
 
