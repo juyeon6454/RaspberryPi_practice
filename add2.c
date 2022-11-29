@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <string.h>
-
+#include "bmpHeader.h"
 #define BYTE unsigned char
 
 #define widthbytes(bits) (((bits)+31)/32*4)
@@ -24,21 +24,10 @@ int main(int argc, char** argv) {
 	RGBQUAD palrgb[256];
 	
 	/* BMP FILE INFO */
-	unsigned short int type; 
-	unsigned int file_size; 
-	unsigned short int reserved1; 
-	unsigned short int reserved2; 
-	unsigned int offset;
-	
 	/* BMP IMAGE INFO */
-	unsigned int header_size; 
-	int width, height; 
-	unsigned short int planes; 
-	unsigned short int bits; 
-	unsigned int compression; 
-	unsigned int imagesize; 
-	int hresolution, vresolution; 
-	unsigned int ncolors, importantcolors; 
+
+BITMAPFILEHEADER bmpHeader;
+BITMAPINFOHEADER bmpInfoHeader;
 
 	char input[128], output[128];
 	
@@ -60,25 +49,9 @@ int main(int argc, char** argv) {
 		fprintf(stderr, "Error : Failed to open file...₩n"); 
 		return -1;
 	}
-	
-	fread(&type, sizeof(unsigned short int), 1, fp); 
-	fread(&file_size, sizeof(unsigned int), 1, fp); 
-	fread(&reserved1, sizeof(unsigned short int), 1, fp); 
-	fread(&reserved2, sizeof(unsigned short int), 1, fp); 
-	fread(&offset, sizeof(unsigned int), 1, fp);
-	
-	fread(&header_size, sizeof(unsigned int), 1, fp); 
-	fread(&width, sizeof(int), 1, fp);
-	fread(&height, sizeof(int), 1, fp);	
-	fread(&planes, sizeof(unsigned short int), 1, fp); 
-	fread(&bits, sizeof(unsigned short int), 1, fp); 
-	fread(&compression, sizeof(unsigned int), 1, fp); 
-	fread(&imagesize, sizeof(unsigned int), 1, fp); 
-	fread(&hresolution, sizeof(int), 1, fp); 
-	fread(&vresolution, sizeof(int), 1, fp); 
-	fread(&ncolors, sizeof(unsigned int), 1, fp); 
-	fread(&importantcolors, sizeof(unsigned int), 1, fp);
-	
+
+	fread(&bmpHeader, sizeof(BITMAPFILEHEADER), 1, fp);
+	fread(&bmpInfoHeader, sizeof(BITMAPINFOHEADER, 1, fp);
 	size=widthbytes(bits * width); 
 	graysize = widthbytes(8 * width);
 	
@@ -144,3 +117,4 @@ int main(int argc, char** argv) {
 	
 	return 0;
 }
+
