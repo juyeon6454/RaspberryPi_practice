@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
 	char input[128], output[128];
 	
 	int i, j, size; 
+		int z, elemSize;
 	int xFactor = 2, yFactor = 2; 
 	float srcX, srcY;
 	int index; 
@@ -86,14 +87,24 @@ int main(int argc, char** argv) {
 	
 	fclose(fp);
 	
-	for(i=0; i<height*3; i+=3) { 
-		for(j=0; j<width*3; j+=3) {
-			outimg[(j*xFactor)+(width*xFactor*i*yFactor)]=inimg[j+(i*width)]; 
-			outimg[(j*xFactor)+(width*xFactor*i*yFactor)+1]=inimg[j+(i*width)+1]; 
-			outimg[(j*xFactor)+(width*xFactor*i*yFactor)+2]=inimg[j+(i*width)+2];
-		};
-	 };	  
-	
+	 
+	 elemSize = bits / 8;
+	 for(i=0; i<height*elemSize; i += elemSize) {
+	 	for(j=0; j<width*elemSize; j += elemSize) {
+			for(z=0; z<elemSize; z++){
+			int e1 = inimg[j+ (i * width) + z] ;
+			int e2 = inimg[j + elemSize + (i * width) + z];
+			int e3 = inimg[j + (i+elemSize)*width + z];
+			int e4 = inimg[j + elemSize + (i+elemSize)*width + z];
+			outimg[(j + (i*yFactor+width))*xFactor + z] = e1;
+			outimg[(j+ (i*yFactor*width))*xFactor + elemSize + z] = e1+e2 >> 1;
+			outimg[(j + (i+elemSize)*yFactor*width)*xFactor + z] = e1+e3 >> 1;
+			outimg[(j + (i+elemSize)*yFactor*width)*xFactor +elemSize + z] = e1+e2+e3+e4 >> 2;
+
+}
+}
+}
+
 	width*=xFactor, height*=yFactor; 
 	size=widthbytes(bits*width); 
 	imagesize=height*size; 
