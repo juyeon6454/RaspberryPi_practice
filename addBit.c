@@ -13,6 +13,12 @@ typedef struct tagRGBQUAD{
 	BYTE rgbReserved;
 } RGBQUAD;
 
+inline unsigned char clip(int value, int min, int max);
+unsigned char clip(int value, int min, int max)
+{
+    return(value > max? max : value < min? min : value);
+}
+
 int main(int argc, char** argv) {
 	FILE* fp; 
 	RGBQUAD palrgb[256];
@@ -37,8 +43,6 @@ int main(int argc, char** argv) {
 	char input[128], output[128];
 	
 	int i, j, size; 
-		int z, elemSize;
-	int xFactor = 2, yFactor = 2; 
 	float srcX, srcY;
 	int index; 
 	float r,g,b,gray;
@@ -52,7 +56,7 @@ int main(int argc, char** argv) {
 	strcpy(output, argv[2]);
 	
 	
-	if((fp=fopen(input, "rb"))==NULL) { 
+	if((fp=fopen(input, "rb")) == NULL) { 
 		fprintf(stderr, "Error : Failed to open file...₩n"); 
 		return -1;
 	}
@@ -82,30 +86,27 @@ int main(int argc, char** argv) {
 		imagesize=height*size;
 	
 	inimg=(BYTE*)malloc(sizeof(BYTE)*imagesize); 
-	outimg=(BYTE*)malloc(sizeof(BYTE)*imagesize*xFactor*yFactor); 
+	outimg=(BYTE*)malloc(sizeof(BYTE)*imagesize); 
 	fread(inimg, sizeof(BYTE), imagesize, fp); 
 	
 	fclose(fp);
 	
+	for(i=0; i<height*3; i+=3) { 
+		for(j=0; j<width*3; j+=3) {
+			int b = inimg[j+(i*width+0)]; 
+			int g = inimg[j+(i*width+1)]; 
+			int r = inimg[j+(i*width+2)]; 
+			
+			b += 50;
+			g += 50;
+			r += 50; 
+			
+			outimg[j+width*i+0]= clip(b, 0, 255);
+			outimg[j+width*i+1]= clip(g, 0, 255);
+			outimg[j+width*i+2]= clip(r, 0, 255);
+		};
+	 };	   
 	 
-	 elemSize = bits / 8;
-	 for(i=0; i<height*elemSize; i += elemSize) {
-	 	for(j=0; j<width*elemSize; j += elemSize) {
-			for(z=0; z<elemSize; z++){
-			int e1 = inimg[j+ (i * width) + z] ;
-			int e2 = inimg[j + elemSize + (i * width) + z];
-			int e3 = inimg[j + (i+elemSize)*width + z];
-			int e4 = inimg[j + elemSize + (i+elemSize)*width + z];
-			outimg[(j + (i*yFactor*width))*xFactor + z] = e1;
-			outimg[(j+ (i*yFactor*width))*xFactor + elemSize + z] = e1+e2 >> 1;
-			outimg[(j +(( i+elemSize)*yFactor*width))*xFactor + z] = e1+e3 >> 1;
-			outimg[(j + ((i+elemSize)*yFactor*width))*xFactor +elemSize + z] = e1+e2+e3+e4 >> 2;
-
-}
-}
-}
-
-	width*=xFactor, height*=yFactor; 
 	size=widthbytes(bits*width); 
 	imagesize=height*size; 
 	offset+=256*sizeof(RGBQUAD);
