@@ -93,10 +93,10 @@ int main(int argc, char** argv)
 			
 			if(new_x <0 || new_x > height) {
 				outimg[index+3*j+0] = 0;
-				outimg[index+3*j+1] = 0xff;
+				outimg[index+3*j+1] = 0;
 				outimg[index+3*j+2] = 0;
 			} else if (new_y <0 || new_y > width) {
-				outimg[index+3*j+0] =0xff ;
+				outimg[index+3*j+0] = 0;
 				outimg[index+3*j+1] = 0;
 				outimg[index+3*j+2] = 0;
 			} else {
