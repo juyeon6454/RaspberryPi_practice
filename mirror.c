@@ -4,7 +4,7 @@
 #include <math.h>
 
 #define BYTE	unsigned char
-#define M_PI	3.141592654
+//#define M_PI	3.141592654
 #define BASE	15
 
 typedef struct tagRGBQUAD {
@@ -42,8 +42,8 @@ void main(int argc, char** argv)
 	unsigned char *inimg;
 	unsigned char *outimg;
  
-	strcpy(input, "input.bmp"); //argv[1]);
-	strcpy(output, "output.bmp"); //argv[2]);
+	strcpy(input, argv[1]); //argv[1]);
+	strcpy(output, argv[2]); //argv[2]);
  
 	if((fp = fopen(input, "rb")) == NULL) {
 		fprintf(stderr, "Error : Failed to open file...\n");
@@ -77,7 +77,7 @@ void main(int argc, char** argv)
 
 	for(i = 0; i < height; i++) {
 		index = (height-i-1) * size; 
-		for(j = 0 ; j < width; j++) {
+		for(j = 0 ; j < width-1; j++) {
 			outimg[index+3*j+0] = inimg[size*i+3*j+0];
 			outimg[index+3*j+1] = inimg[size*i+3*j+1];
 			outimg[index+3*j+2] = inimg[size*i+3*j+2];
