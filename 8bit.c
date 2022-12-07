@@ -63,7 +63,7 @@ int main(int argc, char** argv)
 
     for(int i = 0; i < bmpInfoHeader.biClrUsed; i++) 
         //printf("%d : %x %x %x %x\n", i, palrgb[i].rgbRed, palrgb[i].rgbGreen, 
-                              palrgb[i].rgbRed, palrgb[i].rgbReserved);
+                             // palrgb[i].rgbRed, palrgb[i].rgbReserved;
     //printf("%d %d\n", sizeof(BITMAPFILEHEADER), sizeof(BITMAPINFOHEADER));
 
     inimg = (ubyte*)malloc(sizeof(ubyte)*bmpInfoHeader.SizeImage); 
