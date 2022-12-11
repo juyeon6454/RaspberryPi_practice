@@ -87,7 +87,6 @@ int main(int argc, char** argv)
     bmpInfoHeader.biClrImportant = 0;
 
     bmpHeader.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + sizeof(RGBQUAD)*256;
-    bmpHeader.bfSize = bmpHeader.bfOffBits + bmpInfoHeader.SizeImage;
 
     /* BITMAPFILEHEADER 구조체의 데이터 */
     fwrite(&bmpHeader, sizeof(BITMAPFILEHEADER), 1, fp);
