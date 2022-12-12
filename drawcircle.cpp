@@ -13,7 +13,7 @@ int main()
 	Point p1(100, 100), p2(220, 100);
 	Size size(50, 40);
 	circle(image, p1, 50, color, -1);
-	ellipse(image, p2, size,0 , 110, 270, color,10 );
+	ellipse(image, p2, size,45, 0, 270, color, -1);
 
 	imshow("Draw Circle", image);
 	waitKey(0);
