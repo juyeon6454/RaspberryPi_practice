@@ -17,7 +17,7 @@ int main(int argc, char **argv)
  		strcpy(input, argv[1]);
 		if((fp = fopen(input, "rb")) == NULL)		{
 			fprintf(stderr,"File open to fail\n");
-			return -1;
+			return -1; // MEMORY FREE FIRST
 		}
 
 		fread(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
