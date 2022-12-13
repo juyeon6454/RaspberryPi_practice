@@ -16,6 +16,11 @@ int main(int argc, char **argv)
 		strcpy(input, argv[1]);
 		strcpy(output, argv[2]);
 
+		if(argc !=3) {
+			fprintf(stderr, "%s usage : input.bmp output.bmp\n", argv[0]);
+			return -1;
+		}
+
 		if((fp = fopen(argv[1],"rb")) ==NULL){
 			fprintf(stderr, "Error : Failed to open file...\n");
 			exit(EXIT_FAILURE);
@@ -32,10 +37,9 @@ int main(int argc, char **argv)
 		inimg =malloc(sizeof(UBYTE)*imagesize);
 		outimg =malloc(sizeof(UBYTE)*imagesize);
 
-		fread(inimg, sizeof(UBYTE),  imagesize, fp);
-		fread(outimg, sizeof(UBYTE), imagesize, fp);
-		fclose(fp);
-	
+		fread(inimg, sizeof(UBYTE)*imagesize, 1, fp);
+		fread(outimg, sizeof(UBYTE)*imagesize, 1, fp);
+		fclose(fp);	
 		for(int i = 0; i < bmpInfoHeader.biHeight; i++) {
 				for(int j=0; j<bmpInfoHeader.biWidth * elemsize; j+=elemsize) 
 				{
@@ -46,14 +50,14 @@ int main(int argc, char **argv)
 							outimg[j+(i*bmpInfoHeader.biWidth*elemsize+2)]=inimg[j+(i*bmpInfoHeader.biWidth * elemsize + 2)];
 				}
 		}
-		if((fp = fopen(argv[2], "w")) == NULL){
+		if((fp = fopen(argv[2], "wb")) == NULL){
 				fprintf(stderr, "Error : Failed to open file...\n");
 				exit(EXIT_FAILURE);
 		}
 		fwrite(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 		fwrite(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
 
-		fwrite(outimg, sizeof(UBYTE), 1, fp);
+		fwrite(outimg, sizeof(UBYTE)*imagesize, 1, fp);
 		free(inimg);
 		free(outimg);
 	    fclose(fp);
