@@ -14,6 +14,12 @@ int main(int argc, char **argv)
 	BITMAPINFOHEADER bmpInfoHeader;
 	RGBQUAD *palrgb;
 
+	if(argc!=3)
+	{
+		fprintf(stderr, "Usgae : Fail to file open\n");
+		return -1;
+	}
+
 	if((fp = fopen(argv[1],"rb"))==NULL)
 	{
 			fprintf(stderr, "Usage : Fail to file open\n");
@@ -38,21 +44,14 @@ int main(int argc, char **argv)
 
 	printf("width : %d , height : %d , imagesize : %d ", bmpInfoHeader.biWidth, bmpInfoHeader.biHeight, imagesize);
 
-	for(int i = 0; i < bmpInfoHeader.biHeight; i++)
-	{
-			for(int j=0; j < size; j +=elemsize)
-			{
-				//	int b = inimg[j + i * size + 0];
-			   //   int g = inimg[j + i * size + 1];
-				//	int r = inimg[j + i * size + 2];
 
-					//printf ("r : %d, g : %d, b : %d" , r, g, b);
-					outimg[j+i*size+0] = inimg [j+i*size+0];
-					outimg[j+i*size+1] = inimg [j+i*size+1];
-					outimg[j+i*size+2] = inimg [j+i*size+2];
-					//printf ("r : %d, g : %d, b : %d\n" , r, g, b);
-			}
+	for(int i = 0; i < imagesize; i+=elemsize)
+	{
+			outimg[i+0] = inimg[i+0];
+			outimg[i+1] = inimg[i+1];
+			outimg[i+2] = inimg[i+2];
 	}
+
 	if((fp = fopen(argv[2],"wb"))== NULL)
 	{
 			fprintf(stderr, "File open fail\n");
@@ -77,6 +76,7 @@ int main(int argc, char **argv)
 	free(outimg);
 	free(palrgb);
 	fclose(fp);
+
 
 	return 0;
 }
