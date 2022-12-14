@@ -2,7 +2,7 @@
 using namespace cv;
 using namespace std;
 
-void put_string(Mat &frame, string text, Point pt, int value) {
+void put_string(Mat &frame, string text, Point pt, int value) 
 {
 		text += to_string(value);
 		Point shade = pt + Point(2, 2);
@@ -15,9 +15,9 @@ int main()
 {
 		VideoCapture capture;
 		capture.open("./video_file.avi");
-		CV_Aassert(capture.isOpened());
+		CV_Assert(capture.isOpened());
 
-		double frame_rate = capture.get(CV_CAP_PROP_FPS);
+		double frame_rate = capture.get(CAP_PROP_FPS);
 		int delay = 1000 / frame_rate;
 		int frame_cnt = 0;
 		Mat frame;
@@ -29,4 +29,12 @@ int main()
 				if(frame_cnt<100);
 				else if(frame_cnt < 200 ) frame -= Scalar(0,0,100);
 				else if(frame_cnt < 300) frame += Scalar(100,0,0);
+			    else if(frame_cnt <400) frame =frame *1.5;
+     			else if(frame_cnt <500) frame =frame *0.5;
+
+     			put_string(frame, "frame_cnt", Point(20,50), frame_cnt);
+      			imshow("동영상 파일 읽기" ,frame);
+   }
+      return 0;
+   }
 
