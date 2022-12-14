@@ -12,16 +12,12 @@ int main()
 
 		putText(image, "FONT_HERSHEY_SIMPLEX", Point(10,30),
 						FONT_HERSHEY_SIMPLEX, scale, color, 1);
-		
 		putText(image, "FONT_HERSHEY_PLAIN", Point(10,60),
 						FONT_HERSHEY_PLAIN, scale, color, 1);
-		
 		putText(image, "FONT_HERSHEY_DUPLEX", Point(10,90),
 						FONT_HERSHEY_DUPLEX, scale, color, 1);
-		
 		putText(image, "FONT_HERSHEY_COMPLEX", Point(10,120),
 						FONT_HERSHEY_COMPLEX, scale, color, 1);
-	
 		putText(image, "FONT_HERSHEY_TRIPLEX", Point(10,150),
 						FONT_HERSHEY_TRIPLEX, scale, color, 1);
 		putText(image, "FONT_HERSHEY_COMPLEX_SMALL", Point(10,180),

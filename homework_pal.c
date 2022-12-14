@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
 	fread(inimg, sizeof(UBYTE), imagesize, fp);
 	fread(outimg, sizeof(UBYTE), imagesize, fp);
-	fread(palrgb, sizeof(RGBQUAD), 256, fp);
+	fread(palrgb, sizeof(RGBQUAD)*256, 1, fp);
 	fclose(fp);
 
 
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 	fwrite(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 	fwrite(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
 	fwrite(outimg, sizeof(UBYTE), imagesize, fp);
-	fwrite(palrgb, sizeof(RGBQUAD), 256, fp);
+	fwrite(palrgb, sizeof(RGBQUAD)*256, 1, fp);
 	free(inimg);
 	free(outimg);
 	//free(palrgb);
