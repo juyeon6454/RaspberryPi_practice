@@ -1,0 +1,530 @@
+/* base */
+.blind {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+.toggle_oldermail {
+	color: #333;
+	font-size: 11px;
+	border: 1px solid #cbcbcb;
+	background-color: #fff;
+	height: 26px;
+	line-height: 24px;
+	padding: 0 9px;
+	cursor: pointer;
+}
+
+.toggle_oldermail .ico_arrow_down {
+	border: 3px solid transparent;
+	border-top-color: #666;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+[data-workseditor^='WorksTemplate.'] a.text_mode {
+	color: #222;
+	text-decoration: none;
+	cursor: default;
+	pointer-events: none;
+}
+
+/* reset contents  */
+body, p {
+	margin: 0;
+	padding: 0;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+button, input {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+.ly_image_toolbar,
+.ly_video_toolbar {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: none;
+}
+
+.ly_image_toolbar .btn_group,
+.ly_image_toolbar .btn_wrap,
+.ly_video_toolbar .btn_group,
+.ly_video_toolbar .btn_wrap {
+	float: left;
+	line-height: 0;
+	border-right: 1px solid #ebebeb;
+}
+
+.ly_image_toolbar .btn_wrap:last-child,
+.ly_image_toolbar .btn_group .btn_wrap,
+.ly_video_toolbar .btn_wrap:last-child,
+.ly_video_toolbar .btn_group .btn_wrap {
+	border-right: 0;
+}
+
+.ly_image_toolbar .btn_group,
+.ly_video_toolbar .btn_group {
+	padding: 0 4px;
+}
+
+.ly_image_toolbar .btn_group .btn_wrap button,
+.ly_video_toolbar .btn_group .btn_wrap button {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.ly_image_toolbar button,
+.ly_video_toolbar button {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	vertical-align: top;
+	padding: 9px 12px;
+	cursor: pointer;
+}
+
+.ly_image_toolbar button.scale_small:before,
+.ly_video_toolbar button.scale_small:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -50px -279px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.scale_small:hover:before,
+.ly_video_toolbar button.scale_small:hover:before {
+	background-position: -73px -279px;
+}
+
+.ly_image_toolbar button.scale_small.active:before,
+.ly_video_toolbar button.scale_small.active:before {
+	background-position: -96px -279px;
+}
+
+.ly_image_toolbar button.scale_small.disabled:before, .ly_image_toolbar button.scale_small[disabled]:before, .ly_image_toolbar button.scale_small[disabled="disabled"]:before,
+.ly_video_toolbar button.scale_small.disabled:before,
+.ly_video_toolbar button.scale_small[disabled]:before,
+.ly_video_toolbar button.scale_small[disabled="disabled"]:before {
+	background-position: -50px -279px;
+}
+
+.ly_image_toolbar button.scale_fit:before,
+.ly_video_toolbar button.scale_fit:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -286px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.scale_fit:hover:before,
+.ly_video_toolbar button.scale_fit:hover:before {
+	background-position: -286px -119px;
+}
+
+.ly_image_toolbar button.scale_fit.active:before,
+.ly_video_toolbar button.scale_fit.active:before {
+	background-position: -286px -142px;
+}
+
+.ly_image_toolbar button.scale_fit.disabled:before, .ly_image_toolbar button.scale_fit[disabled]:before, .ly_image_toolbar button.scale_fit[disabled="disabled"]:before,
+.ly_video_toolbar button.scale_fit.disabled:before,
+.ly_video_toolbar button.scale_fit[disabled]:before,
+.ly_video_toolbar button.scale_fit[disabled="disabled"]:before {
+	background-position: -286px -96px;
+}
+
+.ly_image_toolbar button.scale_origin:before,
+.ly_video_toolbar button.scale_origin:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -286px -165px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.scale_origin:hover:before,
+.ly_video_toolbar button.scale_origin:hover:before {
+	background-position: -286px -188px;
+}
+
+.ly_image_toolbar button.scale_origin.active:before,
+.ly_video_toolbar button.scale_origin.active:before {
+	background-position: -286px -211px;
+}
+
+.ly_image_toolbar button.scale_origin.disabled:before, .ly_image_toolbar button.scale_origin[disabled]:before, .ly_image_toolbar button.scale_origin[disabled="disabled"]:before,
+.ly_video_toolbar button.scale_origin.disabled:before,
+.ly_video_toolbar button.scale_origin[disabled]:before,
+.ly_video_toolbar button.scale_origin[disabled="disabled"]:before {
+	background-position: -286px -165px;
+}
+
+.ly_image_toolbar button.image_outline:before,
+.ly_video_toolbar button.image_outline:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -286px -234px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.image_outline:hover:before,
+.ly_video_toolbar button.image_outline:hover:before {
+	background-position: -4px -279px;
+}
+
+.ly_image_toolbar button.image_outline.active:before,
+.ly_video_toolbar button.image_outline.active:before {
+	background-position: -27px -279px;
+}
+
+.ly_image_toolbar button.image_outline.disabled:before, .ly_image_toolbar button.image_outline[disabled]:before, .ly_image_toolbar button.image_outline[disabled="disabled"]:before,
+.ly_video_toolbar button.image_outline.disabled:before,
+.ly_video_toolbar button.image_outline[disabled]:before,
+.ly_video_toolbar button.image_outline[disabled="disabled"]:before {
+	background-position: -286px -234px;
+}
+
+.ly_image_toolbar button.image_edit,
+.ly_video_toolbar button.image_edit {
+	padding-right: 7px;
+}
+
+.ly_image_toolbar button.image_edit:before,
+.ly_video_toolbar button.image_edit:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -132px -50px;
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.image_edit:hover:before,
+.ly_video_toolbar button.image_edit:hover:before {
+	background-position: -132px -73px;
+}
+
+.ly_image_toolbar button.image_edit.active:before,
+.ly_video_toolbar button.image_edit.active:before {
+	background-position: -132px -96px;
+}
+
+.ly_image_toolbar button.image_edit.disabled:before, .ly_image_toolbar button.image_edit[disabled]:before, .ly_image_toolbar button.image_edit[disabled="disabled"]:before,
+.ly_video_toolbar button.image_edit.disabled:before,
+.ly_video_toolbar button.image_edit[disabled]:before,
+.ly_video_toolbar button.image_edit[disabled="disabled"]:before {
+	background-position: -132px -50px;
+}
+
+.ly_image_toolbar button.image_remove:before,
+.ly_video_toolbar button.image_remove:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -119px -279px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.image_remove:hover:before,
+.ly_video_toolbar button.image_remove:hover:before {
+	background-position: -142px -279px;
+}
+
+.ly_image_toolbar button.image_remove.active:before,
+.ly_video_toolbar button.image_remove.active:before {
+	background-position: -165px -279px;
+}
+
+.ly_image_toolbar button.image_remove.disabled:before, .ly_image_toolbar button.image_remove[disabled]:before, .ly_image_toolbar button.image_remove[disabled="disabled"]:before,
+.ly_video_toolbar button.image_remove.disabled:before,
+.ly_video_toolbar button.image_remove[disabled]:before,
+.ly_video_toolbar button.image_remove[disabled="disabled"]:before {
+	background-position: -119px -279px;
+}
+
+.ly_image_toolbar button.tit_edit:before,
+.ly_video_toolbar button.tit_edit:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_564c69da.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_eda09f72.svg);
+	background-size: 364px 356px;
+	background-position: -286px -27px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.tit_edit:hover:before,
+.ly_video_toolbar button.tit_edit:hover:before {
+	background-position: -286px -50px;
+}
+
+.ly_image_toolbar button.tit_edit.active:before,
+.ly_video_toolbar button.tit_edit.active:before {
+	background-position: -286px -73px;
+}
+
+.ly_image_toolbar button.tit_edit.disabled:before, .ly_image_toolbar button.tit_edit[disabled]:before, .ly_image_toolbar button.tit_edit[disabled="disabled"]:before,
+.ly_video_toolbar button.tit_edit.disabled:before,
+.ly_video_toolbar button.tit_edit[disabled]:before,
+.ly_video_toolbar button.tit_edit[disabled="disabled"]:before {
+	background-position: -286px -27px;
+}
+
+.ly_image_select_area,
+.ly_video_select_area {
+	position: absolute;
+	border: 5px solid #ddd;
+	z-index: 10;
+}
+
+.ly_image_select_area .tit_editor,
+.ly_video_select_area .tit_editor {
+	display: none;
+	height: 36px;
+	border: solid 1px #dadada;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+}
+
+.ly_image_select_area .tit_editor.editing,
+.ly_video_select_area .tit_editor.editing {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.ly_image_select_area .tit_editor button,
+.ly_video_select_area .tit_editor button {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	min-width: 57px;
+	height: 36px;
+	padding: 0 16px;
+	border: 0;
+	font-size: 14px;
+	line-height: 36px;
+	background-color: #fff;
+}
+
+.ly_image_select_area .tit_editor button:hover, .ly_image_select_area .tit_editor button.hover,
+.ly_video_select_area .tit_editor button:hover,
+.ly_video_select_area .tit_editor button.hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ly_image_select_area .tit_editor button:focus, .ly_image_select_area .tit_editor button.focus,
+.ly_video_select_area .tit_editor button:focus,
+.ly_video_select_area .tit_editor button.focus {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ly_image_select_area .tit_editor button.btn_submit,
+.ly_video_select_area .tit_editor button.btn_submit {
+	min-width: 73px;
+	padding: 0 24px;
+	background-color: #157efb;
+	color: #fff;
+}
+
+.ly_image_select_area .tit_editor button.btn_submit:hover, .ly_image_select_area .tit_editor button.btn_submit.hover,
+.ly_video_select_area .tit_editor button.btn_submit:hover,
+.ly_video_select_area .tit_editor button.btn_submit.hover {
+	background-color: #1373e6;
+}
+
+.ly_image_select_area .tit_editor button.btn_submit:focus, .ly_image_select_area .tit_editor button.btn_submit.focus,
+.ly_video_select_area .tit_editor button.btn_submit:focus,
+.ly_video_select_area .tit_editor button.btn_submit.focus {
+	background: #1269d2;
+}
+
+.ly_image_select_area .tit_editor .inp,
+.ly_video_select_area .tit_editor .inp {
+	position: relative;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	background-color: #fff;
+}
+
+.ly_image_select_area .tit_editor .inp label,
+.ly_video_select_area .tit_editor .inp label {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+.ly_image_select_area .tit_editor .inp input[type="text"],
+.ly_video_select_area .tit_editor .inp input[type="text"] {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	width: 100%;
+	height: 27px;
+	padding-top: 9px;
+	padding-left: 11px;
+	border: 0;
+	background-color: transparent;
+	font-size: 14px;
+	color: #222;
+	line-height: 17px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ly_image_select_area .tit_editor .inp input[type="text"]:focus,
+.ly_video_select_area .tit_editor .inp input[type="text"]:focus {
+	text-overflow: clip;
+}
+
+.ly_image_select_area .tit_editor .inp input[type="text"]::-ms-clear,
+.ly_video_select_area .tit_editor .inp input[type="text"]::-ms-clear {
+	display: none;
+}
+
+.ly_image_select_area .tit_editor .btn_box,
+.ly_video_select_area .tit_editor .btn_box {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	padding: 0;
+}
+
+.ly_image_select_area .tit_editor .btn_box .btn_submit,
+.ly_video_select_area .tit_editor .btn_box .btn_submit {
+	font-weight: bold;
+}
+
+.btn_image_size {
+	right: -5px;
+	bottom: -5px;
+	border: 1px solid #222;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	padding: 0;
+	background-color: #fff;
+	-webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+	        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+	cursor: nwse-resize;
+}
+
+.ly_image_toolbar button.image_edit:before,
+.ly_video_toolbar button.image_edit:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -4px -4px;
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.image_edit:hover:before,
+.ly_video_toolbar button.image_edit:hover:before {
+	background-position: -4px -4px;
+}
+
+.ly_image_toolbar button.image_edit.active:before,
+.ly_video_toolbar button.image_edit.active:before {
+	background-position: -32px -4px;
+}
+
+.ly_image_toolbar button.image_edit.disabled:before, .ly_image_toolbar button.image_edit[disabled]:before, .ly_image_toolbar button.image_edit[disabled="disabled"]:before,
+.ly_video_toolbar button.image_edit.disabled:before,
+.ly_video_toolbar button.image_edit[disabled]:before,
+.ly_video_toolbar button.image_edit[disabled="disabled"]:before {
+	background-position: -4px -4px;
+}
+
+.ly_image_toolbar button.image_remove:before,
+.ly_video_toolbar button.image_remove:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -129px -4px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ly_image_toolbar button.image_remove:hover:before,
+.ly_video_toolbar button.image_remove:hover:before {
+	background-position: -129px -4px;
+}
+
+.ly_image_toolbar button.image_remove.active:before,
+.ly_video_toolbar button.image_remove.active:before {
+	background-position: -129px -27px;
+}
+
+.ly_image_toolbar button.image_remove.disabled:before, .ly_image_toolbar button.image_remove[disabled]:before, .ly_image_toolbar button.image_remove[disabled="disabled"]:before,
+.ly_video_toolbar button.image_remove.disabled:before,
+.ly_video_toolbar button.image_remove[disabled]:before,
+.ly_video_toolbar button.image_remove[disabled="disabled"]:before {
+	background-position: -129px -4px;
+}

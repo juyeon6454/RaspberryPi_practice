@@ -1,0 +1,4133 @@
+/* common */
+.workseditor-classic, .workseditor-classic p, .workseditor-classic h1, .workseditor-classic h2, .workseditor-classic h3, .workseditor-classic h4, .workseditor-classic h5, .workseditor-classic h6, .workseditor-classic menu, .workseditor-classic ul, .workseditor-classic ol, .workseditor-classic li, .workseditor-classic dl, .workseditor-classic dt, .workseditor-classic dd, .workseditor-classic table, .workseditor-classic th, .workseditor-classic td, .workseditor-classic form, .workseditor-classic fieldset, .workseditor-classic legend, .workseditor-classic input, .workseditor-classic textarea, .workseditor-classic button, .workseditor-classic select {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none;
+}
+
+.workseditor-classic,
+.workseditor-classic input,
+.workseditor-classic textarea,
+.workseditor-classic select,
+.workseditor-classic button,
+.workseditor-classic table {
+	font-size: 12px;
+}
+
+.workseditor-classic label {
+	cursor: pointer;
+}
+
+.workseditor-classic img, .workseditor-classic fieldset {
+	border: 0;
+}
+
+.workseditor-classic menu, .workseditor-classic ul, .workseditor-classic ol {
+	list-style: none;
+}
+
+.workseditor-classic em, .workseditor-classic address {
+	font-style: normal;
+}
+
+.workseditor-classic a, .workseditor-classic a:link {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.workseditor-classic a:hover, .workseditor-classic a:active, .workseditor-classic a:focus {
+	text-decoration: underline;
+}
+
+.workseditor-classic textarea {
+	overflow: auto;
+}
+
+.workseditor-classic button {
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 0;
+}
+
+.workseditor-classic input, .workseditor-classic select, .workseditor-classic textarea, .workseditor-classic button {
+	outline: none;
+}
+
+.workseditor-classic .blind {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+.workseditor-classic {
+	position: relative;
+	z-index: 20;
+}
+
+.workseditor-classic .editor_head {
+	position: relative;
+	border: 1px solid #ddd;
+	background-color: #fbfbfb;
+	font-size: 0;
+	z-index: 30;
+}
+
+.workseditor-classic .editor_head:after {
+	content: '';
+	height: 0;
+	overflow: hidden;
+	clear: both;
+	display: block;
+}
+
+.workseditor-classic .editor_body {
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-bottom-color: #ebebeb;
+	z-index: 20;
+}
+
+.workseditor-classic .editor_footer {
+	position: relative;
+	z-index: 10;
+}
+
+.workseditor-classic .editor_footer .editor_status {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	font-size: 11px;
+	line-height: 15px;
+	color: #888;
+}
+
+.workseditor-classic .editor_footer .vertical_resize {
+	height: 16px;
+	line-height: 16px;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-top: 0;
+	background-color: #fbfbfb;
+	font-size: 11px;
+	color: #999;
+	vertical-align: top;
+	cursor: n-resize;
+	cursor: ns-resize;
+}
+
+.workseditor-classic .editor_footer .vertical_resize:before {
+	content: '';
+	margin-right: 4px;
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -275px -325px;
+	width: 5px;
+	height: 8px;
+	display: inline-block;
+}
+
+.workseditor-classic .editor_footer .vertical_resize:hover {
+	color: #222;
+}
+
+.workseditor-classic .editor_footer .vertical_resize:hover:before {
+	background-position: -288px -325px;
+}
+
+.workseditor-classic .editor_footer .editor_mode_select {
+	position: absolute;
+	right: 0;
+	top: -1px;
+	font-size: 1px;
+	display: table;
+	border-collapse: collapse;
+}
+
+.workseditor-classic .editor_footer .editor_mode_select button {
+	font-family: tahoma, sans-serif;
+	border: 1px solid #ddd;
+	border-right: 0;
+	font-size: 11px;
+	width: 60px;
+	height: 17px;
+	color: #777;
+	line-height: 15px;
+	border-radius: 0;
+}
+
+.workseditor-classic .editor_footer .editor_mode_select button.active {
+	background-color: #fff;
+	border-top-color: #fff;
+	color: #666;
+	position: relative;
+	z-index: 10;
+}
+
+.workseditor-classic .editor_footer.non_resizable {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	height: 23px;
+	padding: 3px 260px 3px 20px;
+	border: 1px solid #e5e5e6;
+	border-top: 0;
+	background-color: #fafafb;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_status {
+	position: static;
+	padding: 0;
+	font-size: 12px;
+	color: #222;
+	line-height: 16px;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_mode_select {
+	right: -1px;
+	border-right: 0;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_mode_select button {
+	width: 82px;
+	height: 24px;
+	padding: 2px 16px;
+	border-color: #e5e5e6;
+	border-left-color: #fafafb;
+	border-right: 1px solid #fafafb;
+	font-family: inherit;
+	font-size: 12px;
+	color: #989898;
+	text-align: center;
+	line-height: 18px;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_mode_select button.active {
+	background-color: #fff;
+	border-left-color: #ddd;
+	border-right-color: #ddd;
+	color: #222;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_mode_select button:last-of-type {
+	border-right-color: #ddd;
+}
+
+.workseditor-classic .editor_footer.non_resizable .editor_mode_select button + button {
+	margin-left: -1px;
+}
+
+.workseditor-classic .wrong {
+	background-image: url("data:image/gif;base64,R0lGODlhBAAEAIABAPsEBP///yH5BAEAAAEALAAAAAAEAAQAAAIFjH9gqgUAOw==");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
+}
+
+.workseditor-classic.drag_in .editor_head {
+	border-bottom-color: #157efb;
+}
+
+.workseditor-classic.drag_in .editor_body {
+	border-color: #157efb;
+}
+
+.workseditor-classic.drag_in .editor_footer .editor_mode_select {
+	border-top: 1px solid #157efb;
+}
+
+.workseditor-classic.drag_in .editor_footer .editor_mode_select button {
+	border-top: 0;
+	height: 15px;
+}
+
+.workseditor-classic.drag_in .editor_footer.non_resizable .editor_mode_select button {
+	height: 23px;
+}
+
+.workseditor-classic .btn_group {
+	display: inline-block;
+	vertical-align: top;
+	border-right: 1px solid #ebebeb;
+	line-height: 33px;
+	padding: 0 11px;
+	position: relative;
+	height: 33px;
+	font-size: 12px;
+}
+
+.workseditor-classic .btn_group .btn_wrap:first-child {
+	margin-left: 0;
+}
+
+.workseditor-classic .btn_group.btn_group_last {
+	border-right: 0;
+	padding-right: 0;
+}
+
+.workseditor-classic .btn_group.btn_group_last.align_layer_right {
+	position: static;
+}
+
+.workseditor-classic .btn_group.btn_group_last.align_layer_right .layer_etc_more {
+	left: auto;
+	right: -1px;
+}
+
+.workseditor-classic .btn_wrap {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	position: relative;
+	float: left;
+}
+
+.workseditor-classic .btn_wrap.open .btn_tool_option .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -333px -325px;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+}
+
+.workseditor-classic .btn_tool {
+	border: 0;
+	background-color: transparent;
+	height: 33px;
+	line-height: 33px;
+	text-align: left;
+	color: #434343;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.workseditor-classic .btn_tool.disabled, .workseditor-classic .btn_tool[disabled="disabled"], .workseditor-classic .btn_tool[disabled] {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	cursor: default;
+}
+
+.workseditor-classic .btn_tool_option {
+	border: 0;
+	padding: 13px 4px 12px 3px;
+	line-height: 0;
+	vertical-align: top;
+}
+
+.workseditor-classic .btn_tool_option .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -301px -325px;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .btn_tool_option:hover .ico:before {
+	background-position: -317px -325px;
+}
+
+.workseditor-classic .btn_tool_option.disabled i.ico:before, .workseditor-classic .btn_tool_option[disabled] i.ico:before, .workseditor-classic .btn_tool_option[disabled="disabled"] i.ico:before {
+	background-position: -301px -325px;
+}
+
+.workseditor-classic .btn_tool_option.disabled, .workseditor-classic .btn_tool_option[disabled="disabled"], .workseditor-classic .btn_tool_option[disabled] {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	cursor: default;
+}
+
+.workseditor-classic .ft_size,
+.workseditor-classic .ft_family {
+	border-right: 1px solid #ebebeb;
+	margin-left: 0;
+	padding-right: 26px;
+}
+
+.workseditor-classic .ft_size .btn_tool,
+.workseditor-classic .ft_family .btn_tool {
+	position: relative;
+	width: 84px;
+}
+
+.workseditor-classic .ft_size .btn_tool .current,
+.workseditor-classic .ft_family .btn_tool .current {
+	padding-left: 16px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	max-width: 100%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.workseditor-classic .ft_size .btn_prev_item,
+.workseditor-classic .ft_size .btn_next_item,
+.workseditor-classic .ft_family .btn_prev_item,
+.workseditor-classic .ft_family .btn_next_item {
+	position: absolute;
+	text-align: center;
+	border: 0;
+	height: auto;
+	line-height: 0;
+	padding: 7px 9px 2px;
+	right: 0;
+}
+
+.workseditor-classic .ft_size .btn_prev_item:active,
+.workseditor-classic .ft_size .btn_next_item:active,
+.workseditor-classic .ft_family .btn_prev_item:active,
+.workseditor-classic .ft_family .btn_next_item:active {
+	background-color: #fafafa;
+}
+
+.workseditor-classic .ft_size .btn_prev_item.disabled, .workseditor-classic .ft_size .btn_prev_item[disabled="disabled"], .workseditor-classic .ft_size .btn_prev_item[disabled],
+.workseditor-classic .ft_size .btn_next_item.disabled,
+.workseditor-classic .ft_size .btn_next_item[disabled="disabled"],
+.workseditor-classic .ft_size .btn_next_item[disabled],
+.workseditor-classic .ft_family .btn_prev_item.disabled,
+.workseditor-classic .ft_family .btn_prev_item[disabled="disabled"],
+.workseditor-classic .ft_family .btn_prev_item[disabled],
+.workseditor-classic .ft_family .btn_next_item.disabled,
+.workseditor-classic .ft_family .btn_next_item[disabled="disabled"],
+.workseditor-classic .ft_family .btn_next_item[disabled] {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	cursor: default;
+}
+
+.workseditor-classic .ft_size .btn_prev_item,
+.workseditor-classic .ft_family .btn_prev_item {
+	top: 0;
+}
+
+.workseditor-classic .ft_size .btn_prev_item .ico:before,
+.workseditor-classic .ft_family .btn_prev_item .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -355px -4px;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .ft_size .btn_prev_item:hover .ico:before,
+.workseditor-classic .ft_family .btn_prev_item:hover .ico:before {
+	background-position: -355px -20px;
+}
+
+.workseditor-classic .ft_size .btn_prev_item.disabled i.ico:before, .workseditor-classic .ft_size .btn_prev_item[disabled] i.ico:before, .workseditor-classic .ft_size .btn_prev_item[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item.disabled i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item[disabled] i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item[disabled="disabled"] i.ico:before {
+	background-position: -355px -4px;
+}
+
+.workseditor-classic .ft_size .btn_next_item,
+.workseditor-classic .ft_family .btn_next_item {
+	bottom: 0;
+	padding-top: 2px;
+	padding-bottom: 7px;
+}
+
+.workseditor-classic .ft_size .btn_next_item .ico:before,
+.workseditor-classic .ft_family .btn_next_item .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -301px -325px;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .ft_size .btn_next_item:hover .ico:before,
+.workseditor-classic .ft_family .btn_next_item:hover .ico:before {
+	background-position: -317px -325px;
+}
+
+.workseditor-classic .ft_size .btn_next_item.disabled i.ico:before, .workseditor-classic .ft_size .btn_next_item[disabled] i.ico:before, .workseditor-classic .ft_size .btn_next_item[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_family .btn_next_item.disabled i.ico:before,
+.workseditor-classic .ft_family .btn_next_item[disabled] i.ico:before,
+.workseditor-classic .ft_family .btn_next_item[disabled="disabled"] i.ico:before {
+	background-position: -301px -325px;
+}
+
+.workseditor-classic .ft_size.open,
+.workseditor-classic .ft_family.open {
+	background-color: #fff;
+}
+
+.workseditor-classic .ft_size .btn_tool {
+	width: 66px;
+}
+
+.workseditor-classic .ft_size .btn_tool .current {
+	text-overflow: clip;
+}
+
+.workseditor-classic .ico {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+
+.workseditor-classic .deco_bold .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .deco_bold .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .deco_bold .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -263px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .deco_bold .btn_tool:hover .ico:before {
+	background-position: -263px -119px;
+}
+
+.workseditor-classic .deco_bold .btn_tool.disabled i.ico:before, .workseditor-classic .deco_bold .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_bold .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -263px -96px;
+}
+
+.workseditor-classic .deco_bold .btn_tool.active .ico:before {
+	background-position: -263px -142px;
+}
+
+.workseditor-classic .deco_italic .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .deco_italic .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .deco_italic .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -27px -256px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .deco_italic .btn_tool:hover .ico:before {
+	background-position: -50px -256px;
+}
+
+.workseditor-classic .deco_italic .btn_tool.disabled i.ico:before, .workseditor-classic .deco_italic .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_italic .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -27px -256px;
+}
+
+.workseditor-classic .deco_italic .btn_tool.active .ico:before {
+	background-position: -73px -256px;
+}
+
+.workseditor-classic .deco_underline .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .deco_underline .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .deco_underline .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -165px -256px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .deco_underline .btn_tool:hover .ico:before {
+	background-position: -188px -256px;
+}
+
+.workseditor-classic .deco_underline .btn_tool.disabled i.ico:before, .workseditor-classic .deco_underline .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_underline .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -165px -256px;
+}
+
+.workseditor-classic .deco_underline .btn_tool.active .ico:before {
+	background-position: -211px -256px;
+}
+
+.workseditor-classic .deco_strike .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .deco_strike .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .deco_strike .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -96px -256px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .deco_strike .btn_tool:hover .ico:before {
+	background-position: -119px -256px;
+}
+
+.workseditor-classic .deco_strike .btn_tool.disabled i.ico:before, .workseditor-classic .deco_strike .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_strike .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -96px -256px;
+}
+
+.workseditor-classic .deco_strike .btn_tool.active .ico:before {
+	background-position: -142px -256px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool,
+.workseditor-classic .ft_color .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+	position: relative;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool .btn_label,
+.workseditor-classic .ft_color .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool .ico:before,
+.workseditor-classic .ft_color .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -263px -165px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool:hover .ico:before,
+.workseditor-classic .ft_color .btn_tool:hover .ico:before {
+	background-position: -263px -188px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool.disabled i.ico:before, .workseditor-classic .ft_bgcolor .btn_tool[disabled] i.ico:before, .workseditor-classic .ft_bgcolor .btn_tool[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_color .btn_tool.disabled i.ico:before,
+.workseditor-classic .ft_color .btn_tool[disabled] i.ico:before,
+.workseditor-classic .ft_color .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -263px -165px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool .ico {
+	position: relative;
+	z-index: 10;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool.active .current {
+	border-color: #157efb;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool.reverse .ico:before {
+	background-position: -4px -256px;
+}
+
+.workseditor-classic .ft_bgcolor .current {
+	position: absolute;
+	top: 7px;
+	left: 4px;
+	width: 15px;
+	height: 16px;
+	border: 1px solid rgba(153, 153, 153, 0.3);
+	background-color: transparent;
+	z-index: 1;
+}
+
+.workseditor-classic .ft_color .current {
+	position: absolute;
+	right: 3px;
+	top: 17px;
+	width: 5px;
+	height: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.workseditor-classic .ft_color .btn_tool.active .ico:before {
+	background-position: -263px -211px;
+}
+
+.workseditor-classic .align .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .align .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .align .align_left .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -119px -279px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .align .align_left:hover .ico:before {
+	background-position: -280px -279px;
+}
+
+.workseditor-classic .align .align_left.disabled i.ico:before, .workseditor-classic .align .align_left[disabled] i.ico:before, .workseditor-classic .align .align_left[disabled="disabled"] i.ico:before {
+	background-position: -119px -279px;
+}
+
+.workseditor-classic .align .align_left.active .ico:before {
+	background-position: -309px -73px;
+}
+
+.workseditor-classic .align .align_center .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -142px -279px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .align .align_center:hover .ico:before {
+	background-position: -165px -279px;
+}
+
+.workseditor-classic .align .align_center.disabled i.ico:before, .workseditor-classic .align .align_center[disabled] i.ico:before, .workseditor-classic .align .align_center[disabled="disabled"] i.ico:before {
+	background-position: -142px -279px;
+}
+
+.workseditor-classic .align .align_center.active .ico:before {
+	background-position: -188px -279px;
+}
+
+.workseditor-classic .align .align_right .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -4px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .align .align_right:hover .ico:before {
+	background-position: -309px -27px;
+}
+
+.workseditor-classic .align .align_right.disabled i.ico:before, .workseditor-classic .align .align_right[disabled] i.ico:before, .workseditor-classic .align .align_right[disabled="disabled"] i.ico:before {
+	background-position: -309px -4px;
+}
+
+.workseditor-classic .align .align_right.active .ico:before {
+	background-position: -309px -50px;
+}
+
+.workseditor-classic .align .align_justify .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -211px -279px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .align .align_justify:hover .ico:before {
+	background-position: -234px -279px;
+}
+
+.workseditor-classic .align .align_justify.disabled i.ico:before, .workseditor-classic .align .align_justify[disabled] i.ico:before, .workseditor-classic .align .align_justify[disabled="disabled"] i.ico:before {
+	background-position: -211px -279px;
+}
+
+.workseditor-classic .align .align_justify.active .ico:before {
+	background-position: -257px -279px;
+}
+
+.workseditor-classic .text_indent .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .text_indent .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .text_indent .indent .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -96px -325px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .text_indent .indent:hover .ico:before {
+	background-position: -188px -325px;
+}
+
+.workseditor-classic .text_indent .indent.disabled i.ico:before, .workseditor-classic .text_indent .indent[disabled] i.ico:before, .workseditor-classic .text_indent .indent[disabled="disabled"] i.ico:before {
+	background-position: -96px -325px;
+}
+
+.workseditor-classic .text_indent .indent.active .ico:before {
+	background-position: -211px -325px;
+}
+
+.workseditor-classic .text_indent .outdent .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -119px -325px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .text_indent .outdent:hover .ico:before {
+	background-position: -142px -325px;
+}
+
+.workseditor-classic .text_indent .outdent.disabled i.ico:before, .workseditor-classic .text_indent .outdent[disabled] i.ico:before, .workseditor-classic .text_indent .outdent[disabled="disabled"] i.ico:before {
+	background-position: -119px -325px;
+}
+
+.workseditor-classic .text_indent .outdent.active .ico:before {
+	background-position: -165px -325px;
+}
+
+.workseditor-classic .line_height .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .line_height .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .line_height .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -27px -325px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .line_height .btn_tool:hover .ico:before {
+	background-position: -50px -325px;
+}
+
+.workseditor-classic .line_height .btn_tool.disabled i.ico:before, .workseditor-classic .line_height .btn_tool[disabled] i.ico:before, .workseditor-classic .line_height .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -27px -325px;
+}
+
+.workseditor-classic .line_height .btn_tool.active .ico:before {
+	background-position: -73px -325px;
+}
+
+.workseditor-classic .list_style .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .list_style .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .list_style .lst_decimal .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -280px -302px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_decimal:hover .ico:before {
+	background-position: -303px -302px;
+}
+
+.workseditor-classic .list_style .lst_decimal.disabled i.ico:before, .workseditor-classic .list_style .lst_decimal[disabled] i.ico:before, .workseditor-classic .list_style .lst_decimal[disabled="disabled"] i.ico:before {
+	background-position: -280px -302px;
+}
+
+.workseditor-classic .list_style .lst_decimal.active .ico:before {
+	background-position: -332px -4px;
+}
+
+.workseditor-classic .list_style .lst_upperalpha .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -332px -165px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_upperalpha:hover .ico:before {
+	background-position: -332px -188px;
+}
+
+.workseditor-classic .list_style .lst_upperalpha.disabled i.ico:before, .workseditor-classic .list_style .lst_upperalpha[disabled] i.ico:before, .workseditor-classic .list_style .lst_upperalpha[disabled="disabled"] i.ico:before {
+	background-position: -332px -165px;
+}
+
+.workseditor-classic .list_style .lst_upperalpha.active .ico:before {
+	background-position: -332px -211px;
+}
+
+.workseditor-classic .list_style .lst_loweralpha .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -332px -234px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_loweralpha:hover .ico:before {
+	background-position: -332px -257px;
+}
+
+.workseditor-classic .list_style .lst_loweralpha.disabled i.ico:before, .workseditor-classic .list_style .lst_loweralpha[disabled] i.ico:before, .workseditor-classic .list_style .lst_loweralpha[disabled="disabled"] i.ico:before {
+	background-position: -332px -234px;
+}
+
+.workseditor-classic .list_style .lst_loweralpha.active .ico:before {
+	background-position: -332px -280px;
+}
+
+.workseditor-classic .list_style .lst_upperroman .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -332px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_upperroman:hover .ico:before {
+	background-position: -332px -119px;
+}
+
+.workseditor-classic .list_style .lst_upperroman.disabled i.ico:before, .workseditor-classic .list_style .lst_upperroman[disabled] i.ico:before, .workseditor-classic .list_style .lst_upperroman[disabled="disabled"] i.ico:before {
+	background-position: -332px -96px;
+}
+
+.workseditor-classic .list_style .lst_upperroman.active .ico:before {
+	background-position: -332px -142px;
+}
+
+.workseditor-classic .list_style .lst_lowerroman .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -332px -27px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_lowerroman:hover .ico:before {
+	background-position: -332px -50px;
+}
+
+.workseditor-classic .list_style .lst_lowerroman.disabled i.ico:before, .workseditor-classic .list_style .lst_lowerroman[disabled] i.ico:before, .workseditor-classic .list_style .lst_lowerroman[disabled="disabled"] i.ico:before {
+	background-position: -332px -27px;
+}
+
+.workseditor-classic .list_style .lst_lowerroman.active .ico:before {
+	background-position: -332px -73px;
+}
+
+.workseditor-classic .list_style .lst_square .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -119px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_square:hover .ico:before {
+	background-position: -309px -142px;
+}
+
+.workseditor-classic .list_style .lst_square.disabled i.ico:before, .workseditor-classic .list_style .lst_square[disabled] i.ico:before, .workseditor-classic .list_style .lst_square[disabled="disabled"] i.ico:before {
+	background-position: -309px -119px;
+}
+
+.workseditor-classic .list_style .lst_square.active .ico:before {
+	background-position: -309px -165px;
+}
+
+.workseditor-classic .list_style .lst_disc .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -188px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_disc:hover .ico:before {
+	background-position: -309px -211px;
+}
+
+.workseditor-classic .list_style .lst_disc.disabled i.ico:before, .workseditor-classic .list_style .lst_disc[disabled] i.ico:before, .workseditor-classic .list_style .lst_disc[disabled="disabled"] i.ico:before {
+	background-position: -309px -188px;
+}
+
+.workseditor-classic .list_style .lst_disc.active .ico:before {
+	background-position: -309px -234px;
+}
+
+.workseditor-classic .list_style .lst_none .ico:before,
+.workseditor-classic .list_style .lst_bigcircle .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_none:hover .ico:before,
+.workseditor-classic .list_style .lst_bigcircle:hover .ico:before {
+	background-position: -257px -302px;
+}
+
+.workseditor-classic .list_style .lst_none.disabled i.ico:before, .workseditor-classic .list_style .lst_none[disabled] i.ico:before, .workseditor-classic .list_style .lst_none[disabled="disabled"] i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle.disabled i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle[disabled] i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle[disabled="disabled"] i.ico:before {
+	background-position: -309px -96px;
+}
+
+.workseditor-classic .list_style .lst_none.active .ico:before,
+.workseditor-classic .list_style .lst_bigcircle.active .ico:before {
+	background-position: -4px -325px;
+}
+
+.workseditor-classic .list_style .lst_emptydisc .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -257px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_emptydisc:hover .ico:before {
+	background-position: -4px -302px;
+}
+
+.workseditor-classic .list_style .lst_emptydisc.disabled i.ico:before, .workseditor-classic .list_style .lst_emptydisc[disabled] i.ico:before, .workseditor-classic .list_style .lst_emptydisc[disabled="disabled"] i.ico:before {
+	background-position: -309px -257px;
+}
+
+.workseditor-classic .list_style .lst_emptydisc.active .ico:before {
+	background-position: -27px -302px;
+}
+
+.workseditor-classic .list_style .lst_dashed .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -50px -302px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_dashed:hover .ico:before {
+	background-position: -73px -302px;
+}
+
+.workseditor-classic .list_style .lst_dashed.disabled i.ico:before, .workseditor-classic .list_style .lst_dashed[disabled] i.ico:before, .workseditor-classic .list_style .lst_dashed[disabled="disabled"] i.ico:before {
+	background-position: -50px -302px;
+}
+
+.workseditor-classic .list_style .lst_dashed.active .ico:before {
+	background-position: -96px -302px;
+}
+
+.workseditor-classic .list_style .lst_check .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -119px -302px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_check:hover .ico:before {
+	background-position: -142px -302px;
+}
+
+.workseditor-classic .list_style .lst_check.disabled i.ico:before, .workseditor-classic .list_style .lst_check[disabled] i.ico:before, .workseditor-classic .list_style .lst_check[disabled="disabled"] i.ico:before {
+	background-position: -119px -302px;
+}
+
+.workseditor-classic .list_style .lst_check.active .ico:before {
+	background-position: -165px -302px;
+}
+
+.workseditor-classic .list_style .lst_greencheck .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -188px -302px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style .lst_greencheck:hover .ico:before {
+	background-position: -211px -302px;
+}
+
+.workseditor-classic .list_style .lst_greencheck.disabled i.ico:before, .workseditor-classic .list_style .lst_greencheck[disabled] i.ico:before, .workseditor-classic .list_style .lst_greencheck[disabled="disabled"] i.ico:before {
+	background-position: -188px -302px;
+}
+
+.workseditor-classic .list_style .lst_greencheck.active .ico:before {
+	background-position: -234px -302px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_decimal .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -4px -184px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_decimal:hover .ico:before {
+	background-position: -30px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_decimal.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_decimal[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_decimal[disabled="disabled"] i.ico:before {
+	background-position: -4px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_decimal.active .ico:before {
+	background-position: -56px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperalpha .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -82px -184px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperalpha:hover .ico:before {
+	background-position: -108px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperalpha.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_upperalpha[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_upperalpha[disabled="disabled"] i.ico:before {
+	background-position: -82px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperalpha.active .ico:before {
+	background-position: -134px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_loweralpha .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -160px -184px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_loweralpha:hover .ico:before {
+	background-position: -186px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_loweralpha.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_loweralpha[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_loweralpha[disabled="disabled"] i.ico:before {
+	background-position: -160px -184px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_loweralpha.active .ico:before {
+	background-position: -214px -4px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_lowerroman .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -214px -30px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_lowerroman:hover .ico:before {
+	background-position: -214px -56px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_lowerroman.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_lowerroman[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_lowerroman[disabled="disabled"] i.ico:before {
+	background-position: -214px -30px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_lowerroman.active .ico:before {
+	background-position: -214px -82px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperroman .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -214px -108px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperroman:hover .ico:before {
+	background-position: -214px -134px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperroman.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_upperroman[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_upperroman[disabled="disabled"] i.ico:before {
+	background-position: -214px -108px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_upperroman.active .ico:before {
+	background-position: -214px -160px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_square .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -4px -132px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_square:hover .ico:before {
+	background-position: -30px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_square.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_square[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_square[disabled="disabled"] i.ico:before {
+	background-position: -4px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_square.active .ico:before {
+	background-position: -56px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_bigcircle .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -162px -4px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_bigcircle:hover .ico:before {
+	background-position: -162px -30px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_bigcircle.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_bigcircle[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_bigcircle[disabled="disabled"] i.ico:before {
+	background-position: -162px -4px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_bigcircle.active .ico:before {
+	background-position: -162px -56px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_disc .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -82px -132px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_disc:hover .ico:before {
+	background-position: -108px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_disc.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_disc[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_disc[disabled="disabled"] i.ico:before {
+	background-position: -82px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_disc.active .ico:before {
+	background-position: -134px -132px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_emptydisc .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -162px -82px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_emptydisc:hover .ico:before {
+	background-position: -162px -108px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_emptydisc.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_emptydisc[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_emptydisc[disabled="disabled"] i.ico:before {
+	background-position: -162px -82px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_emptydisc.active .ico:before {
+	background-position: -4px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_dashed .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -30px -158px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_dashed:hover .ico:before {
+	background-position: -56px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_dashed.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_dashed[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_dashed[disabled="disabled"] i.ico:before {
+	background-position: -30px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_dashed.active .ico:before {
+	background-position: -82px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_check .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -108px -158px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_check:hover .ico:before {
+	background-position: -134px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_check.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_check[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_check[disabled="disabled"] i.ico:before {
+	background-position: -108px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_check.active .ico:before {
+	background-position: -160px -158px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_greencheck .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -188px -4px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_greencheck:hover .ico:before {
+	background-position: -188px -30px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_greencheck.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_greencheck[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_greencheck[disabled="disabled"] i.ico:before {
+	background-position: -188px -4px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_greencheck.active .ico:before {
+	background-position: -188px -56px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_none .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -188px -82px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_none:hover .ico:before {
+	background-position: -188px -108px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_none.disabled i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_none[disabled] i.ico:before, .workseditor-classic .list_style.dropdown_layer .lst_none[disabled="disabled"] i.ico:before {
+	background-position: -188px -82px;
+}
+
+.workseditor-classic .list_style.dropdown_layer .lst_none.active .ico:before {
+	background-position: -188px -134px;
+}
+
+.workseditor-classic .fn_border .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_border .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_border .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -27px -233px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_border .btn_tool:hover .ico:before {
+	background-position: -50px -233px;
+}
+
+.workseditor-classic .fn_border .btn_tool.disabled i.ico:before, .workseditor-classic .fn_border .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_border .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -27px -233px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_symbols .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -211px -233px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_symbols .btn_tool:hover .ico:before {
+	background-position: -234px -233px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool.disabled i.ico:before, .workseditor-classic .fn_symbols .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_symbols .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -211px -233px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool.active .ico:before {
+	background-position: -263px -4px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -73px -233px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool:hover .ico:before {
+	background-position: -96px -233px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool.disabled i.ico:before, .workseditor-classic .fn_hyperlink .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_hyperlink .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -73px -233px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool.active .ico:before {
+	background-position: -119px -233px;
+}
+
+.workseditor-classic .fn_table .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_table .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_table .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -263px -27px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_table .btn_tool:hover .ico:before {
+	background-position: -263px -50px;
+}
+
+.workseditor-classic .fn_table .btn_tool.disabled i.ico:before, .workseditor-classic .fn_table .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_table .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -263px -27px;
+}
+
+.workseditor-classic .fn_table .btn_tool.active .ico:before {
+	background-position: -263px -73px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -142px -233px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_clearformat .btn_tool:hover .ico:before {
+	background-position: -165px -233px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool.disabled i.ico:before, .workseditor-classic .fn_clearformat .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_clearformat .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -142px -233px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool.active .ico:before {
+	background-position: -188px -233px;
+}
+
+.workseditor-classic .fn_translate .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_translate .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_translate .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -132px -4px;
+	width: 22px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_translate .btn_tool:hover .ico:before {
+	background-position: -132px -27px;
+}
+
+.workseditor-classic .fn_translate .btn_tool.disabled i.ico:before, .workseditor-classic .fn_translate .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_translate .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -132px -4px;
+}
+
+.workseditor-classic .fn_translate .btn_tool .ico {
+	position: relative;
+	top: -1px;
+}
+
+.workseditor-classic .fn_template .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_template .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_template .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -240px -50px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_template .btn_tool:hover .ico:before {
+	background-position: -240px -73px;
+}
+
+.workseditor-classic .fn_template .btn_tool.disabled i.ico:before, .workseditor-classic .fn_template .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_template .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -240px -50px;
+}
+
+.workseditor-classic .fn_template .btn_tool .ico {
+	position: relative;
+	left: 1px;
+}
+
+.workseditor-classic .attach_sticker .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .attach_sticker .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .attach_sticker .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -213px -210px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .attach_sticker .btn_tool:hover .ico:before {
+	background-position: -240px -4px;
+}
+
+.workseditor-classic .attach_sticker .btn_tool.disabled i.ico:before, .workseditor-classic .attach_sticker .btn_tool[disabled] i.ico:before, .workseditor-classic .attach_sticker .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -213px -210px;
+}
+
+.workseditor-classic .attach_sticker .btn_tool.active .ico:before {
+	background-position: -240px -27px;
+}
+
+.workseditor-classic .fn_signature .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_signature .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_signature .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -144px -210px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_signature .btn_tool:hover .ico:before {
+	background-position: -167px -210px;
+}
+
+.workseditor-classic .fn_signature .btn_tool.disabled i.ico:before, .workseditor-classic .fn_signature .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_signature .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -144px -210px;
+}
+
+.workseditor-classic .fn_signature .btn_tool.active .ico:before {
+	background-position: -190px -210px;
+}
+
+.workseditor-classic .capture_editor .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+	padding-left: 4px;
+	width: auto;
+}
+
+.workseditor-classic .capture_editor .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .capture_editor .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -132px -50px;
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .capture_editor .btn_tool:hover .ico:before {
+	background-position: -132px -73px;
+}
+
+.workseditor-classic .capture_editor .btn_tool.disabled i.ico:before, .workseditor-classic .capture_editor .btn_tool[disabled] i.ico:before, .workseditor-classic .capture_editor .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -132px -50px;
+}
+
+.workseditor-classic .capture_editor .btn_tool.active .ico:before {
+	background-position: -132px -96px;
+}
+
+.workseditor-classic .attach_image .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .attach_image .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .attach_image .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -98px -210px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .attach_image .btn_tool:hover .ico:before {
+	background-position: -121px -210px;
+}
+
+.workseditor-classic .attach_image .btn_tool.disabled i.ico:before, .workseditor-classic .attach_image .btn_tool[disabled] i.ico:before, .workseditor-classic .attach_image .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -98px -210px;
+}
+
+.workseditor-classic .attach_video .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .attach_video .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .attach_video .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -240px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .attach_video .btn_tool:hover .ico:before {
+	background-position: -240px -119px;
+}
+
+.workseditor-classic .attach_video .btn_tool.disabled i.ico:before, .workseditor-classic .attach_video .btn_tool[disabled] i.ico:before, .workseditor-classic .attach_video .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -240px -96px;
+}
+
+.workseditor-classic .attach_video .btn_tool.active .ico:before {
+	background-position: -240px -142px;
+}
+
+.workseditor-classic .fn_etc_more .btn_tool {
+	width: 24px;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.workseditor-classic .fn_etc_more .btn_tool .btn_label {
+	text-indent: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workseditor-classic .fn_etc_more .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -240px -165px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .fn_etc_more .btn_tool:hover .ico:before {
+	background-position: -240px -188px;
+}
+
+.workseditor-classic .fn_etc_more .btn_tool.disabled i.ico:before, .workseditor-classic .fn_etc_more .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_etc_more .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -240px -165px;
+}
+
+.workseditor-classic .fn_etc_more .btn_tool.active .ico:before {
+	background-position: -4px -233px;
+}
+
+.workseditor-classic .layer_etc_more {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	display: table;
+	top: 33px;
+	left: 11px;
+	padding: 0 11px;
+	background-color: #fbfbfb;
+	white-space: nowrap;
+}
+
+.workseditor-classic .layer_etc_more .btn_wrap {
+	float: none;
+	display: table-cell;
+	margin-left: 0;
+}
+
+.workseditor-classic .layer_etc_more .btn_wrap + .btn_wrap {
+	padding-left: 5px;
+}
+
+.workseditor-classic .side_menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-right: 21px;
+}
+
+.workseditor-classic .side_menu .btn_wrap {
+	margin-left: 5px;
+}
+
+.workseditor-classic .side_menu .btn_wrap:first-child {
+	margin-left: 0;
+}
+
+.workseditor-classic .dropdown_layer {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	top: 100%;
+	left: -1px;
+	font-size: 12px;
+	display: none;
+	line-height: 1.2;
+}
+
+.workseditor-classic .btn_wrap.open .dropdown_layer {
+	display: block;
+}
+
+.workseditor-classic .ft_family ul {
+	font-size: 14px;
+	padding: 12px 0;
+	max-height: 328px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.workseditor-classic .ft_family a {
+	display: block;
+	line-height: 1.2;
+	padding: 8px 20px;
+	min-width: 140px;
+	color: #222;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.workseditor-classic .ft_family a:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+}
+
+.workseditor-classic .ft_family .active a {
+	color: #157efb;
+	font-weight: bold;
+}
+
+.workseditor-classic .ft_family .ly_editor_tooltip {
+	left: 16px;
+}
+
+.workseditor-classic .ft_size ul {
+	font-size: 14px;
+	padding: 12px 0;
+	max-height: 328px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.workseditor-classic .ft_size a {
+	display: block;
+	line-height: 1.2;
+	padding: 8px 20px;
+	min-width: 140px;
+	color: #222;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.workseditor-classic .ft_size a:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+}
+
+.workseditor-classic .ft_size .active a {
+	color: #157efb;
+	font-weight: bold;
+}
+
+.workseditor-classic .ft_size .dropdown_layer a {
+	padding: 6px 8px;
+}
+
+.workseditor-classic .ft_size .ly_editor_tooltip {
+	left: 16px;
+}
+
+.workseditor-classic .line_height ul {
+	font-size: 14px;
+	padding: 12px 0;
+	max-height: 328px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.workseditor-classic .line_height a {
+	display: block;
+	line-height: 1.2;
+	padding: 8px 20px;
+	min-width: 140px;
+	color: #222;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.workseditor-classic .line_height a:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+}
+
+.workseditor-classic .line_height .active a {
+	color: #157efb;
+	font-weight: bold;
+}
+
+.workseditor-classic .line_height .dropdown_layer ul {
+	font-size: 12px;
+	padding: 12px 0;
+}
+
+.workseditor-classic .line_height .dropdown_layer a {
+	min-width: 36px;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.workseditor-classic .color_picker {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	padding: 4px 0;
+	z-index: 30;
+}
+
+.workseditor-classic .color_picker ul {
+	padding: 15px 18px 16px 20px;
+	width: 129px;
+}
+
+.workseditor-classic .color_picker ul:after {
+	content: '';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.workseditor-classic .color_picker ul.recent_color {
+	border-bottom: 1px solid #eee;
+	padding-top: 6px;
+	padding-bottom: 10px;
+	margin-bottom: 1px;
+}
+
+.workseditor-classic .color_picker li {
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin: 1px 1px 0 0;
+}
+
+.workseditor-classic .color_picker .item {
+	width: 100%;
+	height: 100%;
+	display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	position: relative;
+	text-decoration: none !important;
+}
+
+.workseditor-classic .color_picker .item:hover {
+	border-color: #222;
+}
+
+.workseditor-classic .color_picker .item:hover:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #fff;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.workseditor-classic .color_picker .item.transparent:after {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -332px -303px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.workseditor-classic .color_picker .preset {
+	padding-top: 0;
+	padding-bottom: 12px;
+}
+
+.workseditor-classic .color_picker .preset li {
+	width: 41px;
+	line-height: 17px;
+	text-align: center;
+	margin: 0 2px 2px 0;
+	height: 17px;
+}
+
+.workseditor-classic .color_picker .preset li .item {
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.workseditor-classic .color_picker .preset li .item:hover {
+	border-color: #222;
+}
+
+.workseditor-classic .color_picker .preset li .item:hover:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #fff;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.workseditor-classic .color_picker .active .item {
+	border-color: #222;
+}
+
+.workseditor-classic .color_picker .active .item:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #fff;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.workseditor-classic .text_indent .dropdown_layer,
+.workseditor-classic .align .dropdown_layer {
+	left: -7px;
+}
+
+.workseditor-classic .text_indent .dropdown_layer ul,
+.workseditor-classic .align .dropdown_layer ul {
+	padding: 8px 4px;
+}
+
+.workseditor-classic .text_indent .dropdown_layer li,
+.workseditor-classic .align .dropdown_layer li {
+	line-height: 0;
+	font-size: 0;
+}
+
+.workseditor-classic .text_indent .dropdown_layer .indent,
+.workseditor-classic .text_indent .dropdown_layer .outdent,
+.workseditor-classic .text_indent .dropdown_layer .align_justify,
+.workseditor-classic .text_indent .dropdown_layer .align_right,
+.workseditor-classic .text_indent .dropdown_layer .align_center,
+.workseditor-classic .text_indent .dropdown_layer .align_left,
+.workseditor-classic .align .dropdown_layer .indent,
+.workseditor-classic .align .dropdown_layer .outdent,
+.workseditor-classic .align .dropdown_layer .align_justify,
+.workseditor-classic .align .dropdown_layer .align_right,
+.workseditor-classic .align .dropdown_layer .align_center,
+.workseditor-classic .align .dropdown_layer .align_left {
+	display: block;
+	padding: 8px;
+	line-height: 1;
+}
+
+.workseditor-classic .text_indent .dropdown_layer .indent:before,
+.workseditor-classic .text_indent .dropdown_layer .outdent:before,
+.workseditor-classic .text_indent .dropdown_layer .align_justify:before,
+.workseditor-classic .text_indent .dropdown_layer .align_right:before,
+.workseditor-classic .text_indent .dropdown_layer .align_center:before,
+.workseditor-classic .text_indent .dropdown_layer .align_left:before,
+.workseditor-classic .align .dropdown_layer .indent:before,
+.workseditor-classic .align .dropdown_layer .outdent:before,
+.workseditor-classic .align .dropdown_layer .align_justify:before,
+.workseditor-classic .align .dropdown_layer .align_right:before,
+.workseditor-classic .align .dropdown_layer .align_center:before,
+.workseditor-classic .align .dropdown_layer .align_left:before {
+	content: '';
+	vertical-align: top;
+}
+
+.workseditor-classic .list_style .dropdown_layer {
+	left: -9px;
+}
+
+.workseditor-classic .list_style .dropdown_layer .ordered_list {
+	border-bottom: 1px solid #eee;
+}
+
+.workseditor-classic .list_style .dropdown_layer ul {
+	width: 160px;
+	padding: 5px 7px;
+	overflow: hidden;
+}
+
+.workseditor-classic .list_style .dropdown_layer li {
+	float: left;
+}
+
+.workseditor-classic .list_style .dropdown_layer li a {
+	padding: 5px 7px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer {
+	padding: 20px;
+	left: auto;
+	right: -41px;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer .recent_symbol {
+	border-bottom: 1px solid #eee;
+	padding: 0 20px 15px;
+	margin: 0 -20px 15px;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer ul {
+	width: 463px;
+	overflow: hidden;
+	background: url("data:image/false;base64,R0lGODlhFgAWAIABAO7u7v///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOTlDMkRGRDA2RTYxMUU3ODgwRUI1QjNBOTYxMkUyQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOTlDMkRGRTA2RTYxMUU3ODgwRUI1QjNBOTYxMkUyQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE5OUMyREZCMDZFNjExRTc4ODBFQjVCM0E5NjEyRTJDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE5OUMyREZDMDZFNjExRTc4ODBFQjVCM0E5NjEyRTJDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAABYAFgAAAiuEj6kW7Q8jiLTOit3NeHPqfVAoaiV4Sum4PuT5lrE4fzV3Z3nXmn2wqxQAADs=") repeat;
+	padding-bottom: 1px;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer li {
+	width: 22px;
+	height: 22px;
+	float: left;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer button {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background-color: transparent;
+	text-align: center;
+	color: #000;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	line-height: 22px;
+	border: 1px solid transparent;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer button:hover {
+	border: 1px solid #222;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer {
+	left: auto;
+	right: -12px;
+	padding: 12px 0 9px;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url {
+	display: block;
+	font-size: 0;
+	white-space: nowrap;
+	padding: 8px 20px 0;
+	text-align: right;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text span,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url span {
+	display: inline-block;
+	min-width: 45px;
+	line-height: 30px;
+	vertical-align: top;
+	font-size: 12px;
+	color: #333;
+	padding-right: 10px;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input {
+	width: 300px;
+	height: 32px;
+	line-height: 28px;
+	border: 1px solid #e5e5e5;
+	padding: 2px 0 0 7px;
+	color: #222;
+	font-size: 12px;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input::-webkit-input-placeholder,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #b1b1b1;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input::-moz-placeholder,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #b1b1b1;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input:-ms-input-placeholder,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input:-ms-input-placeholder {
+	/* IE 10+ */
+	color: #b1b1b1;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input:-moz-placeholder,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input:-moz-placeholder {
+	/* Firefox 18- */
+	color: #b1b1b1;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input.placeholder,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input.placeholder {
+	color: #b1b1b1;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_text input:focus,
+.workseditor-classic .fn_hyperlink .dropdown_layer .ipt_url input:focus {
+	border-color: #157efb;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover {
+	float: right;
+	display: block;
+	width: 310px;
+	margin: 0;
+	line-height: 40px;
+	padding: 1px 9px 0 0;
+	overflow: hidden;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover .link_test {
+	float: left;
+	display: none;
+	font-size: 11px;
+	color: #999;
+	text-decoration: none;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover .link_test:hover {
+	text-decoration: underline;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover.active .link_test {
+	display: inline;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover.active .btn_confirm {
+	color: #157efb;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_cover.active .btn_confirm .ico {
+	background-position: -188px -160px;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_confirm {
+	float: right;
+	border: 0;
+	padding: 13px;
+	vertical-align: baseline;
+	height: auto;
+	line-height: 1.2;
+	color: #333;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_confirm:hover {
+	text-decoration: underline;
+}
+
+.workseditor-classic .fn_hyperlink .dropdown_layer .btn_confirm .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -214px -186px;
+	width: 16px;
+	height: 13px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.workseditor-classic .table_generator {
+	width: 161px;
+	padding: 18px 20px;
+	left: auto;
+	right: -1px;
+}
+
+.workseditor-classic .table_generator .grid_header {
+	position: relative;
+	padding-bottom: 12px;
+}
+
+.workseditor-classic .table_generator .grid_header .tit {
+	font-size: 12px;
+	color: #222;
+	font-weight: bold;
+}
+
+.workseditor-classic .table_generator .grid_header .tit .cnt {
+	color: #157efb;
+}
+
+.workseditor-classic .table_generator .grid_header .btn_set_table {
+	border: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 11px;
+	color: #999;
+	line-height: normal;
+	height: auto;
+}
+
+.workseditor-classic .table_generator .grid_cover {
+	position: relative;
+}
+
+.workseditor-classic .table_generator .generate_grid {
+	position: relative;
+	z-index: 10;
+	border-collapse: collapse;
+	width: 100%;
+	height: 161px;
+}
+
+.workseditor-classic .table_generator .generate_grid td {
+	border: 1px solid #d5d5d5;
+}
+
+.workseditor-classic .table_generator .generate_grid_selection {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #157efb;
+	opacity: 0.1;
+	filter: alpha(opacity=20);
+	padding: 1px 0 0 1px;
+	z-index: 1;
+}
+
+.workseditor-classic .table_generator.active .btn_set_table {
+	color: #666;
+	text-decoration: underline;
+}
+
+.workseditor-classic .table_generator.active .table_setting_option {
+	display: table;
+	padding-top: 20px;
+}
+
+.workseditor-classic .table_generator .table_setting_option {
+	display: none;
+}
+
+.workseditor-classic .table_generator .button_cover {
+	clear: both;
+	padding-top: 5px;
+	text-align: right;
+	height: 18px;
+}
+
+.workseditor-classic .table_generator .button_cover .btn_apply {
+	position: absolute;
+	right: 20px;
+}
+
+.workseditor-classic .table_generator .btn_apply {
+	color: #157efb;
+	font-size: 12px;
+	border: 0;
+	line-height: 18px;
+}
+
+.workseditor-classic .table_generator .btn_apply:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -188px -160px;
+	width: 16px;
+	height: 13px;
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+}
+
+.workseditor-classic .table_generator .btn_apply:hover {
+	text-decoration: underline;
+}
+
+.workseditor-classic .table_generator .table_setting_option .ipt_tit {
+	width: 60px;
+	padding-right: 5px;
+	line-height: 24px;
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+	color: #333;
+}
+
+.workseditor-classic .table_generator .table_setting_option .ipt_cover {
+	position: relative;
+	line-height: 22px;
+	display: table-cell;
+	padding-bottom: 8px;
+	white-space: nowrap;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic {
+	display: block;
+	border: 1px solid #e5e5e5;
+	padding-right: 13px;
+	padding-left: 4px;
+	position: relative;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic input {
+	border: 0;
+	width: 100%;
+	height: 100%;
+	padding-left: 3px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .ico {
+	line-height: 1px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .ico:before {
+	margin: 0;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_up,
+.workseditor-classic .table_generator .table_setting_option .numberic .number_down {
+	position: absolute;
+	border: 0;
+	line-height: 0;
+	height: auto;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_up {
+	right: 0;
+	top: 0;
+	padding: 5px 4px 3px 5px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_up .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -355px -169px;
+	width: 5px;
+	height: 3px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_up:hover .ico:before {
+	background-position: -355px -191px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_up.disabled i.ico:before, .workseditor-classic .table_generator .table_setting_option .numberic .number_up[disabled] i.ico:before, .workseditor-classic .table_generator .table_setting_option .numberic .number_up[disabled="disabled"] i.ico:before {
+	background-position: -355px -169px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_down {
+	bottom: 0;
+	right: 0;
+	padding: 3px 4px 5px 5px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_down .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -355px -136px;
+	width: 5px;
+	height: 3px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_down:hover .ico:before {
+	background-position: -355px -158px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .numberic .number_down.disabled i.ico:before, .workseditor-classic .table_generator .table_setting_option .numberic .number_down[disabled] i.ico:before, .workseditor-classic .table_generator .table_setting_option .numberic .number_down[disabled="disabled"] i.ico:before {
+	background-position: -355px -136px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover {
+	position: relative;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .current_width {
+	border: 1px solid #e5e5e5;
+	height: 22px;
+	width: 100%;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0 21px 0 7px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .current_width:after {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -355px -52px;
+	width: 7px;
+	height: 4px;
+	display: inline-block;
+	content: '';
+	position: absolute;
+	right: 6px;
+	top: 10px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .current_width:hover:after {
+	background-position: -355px -88px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover.open .current_width:after {
+	background-position: -355px -100px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover.open .current_width:hover:after {
+	background-position: -355px -124px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_1,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_2,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_3,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_4,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_5 {
+	display: block;
+	height: 24px;
+	line-height: 22px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_1:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_2:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_3:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_4:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_5:before {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	border-top: 1px solid #222;
+	vertical-align: middle;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .active .bd_width_1:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .active .bd_width_2:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .active .bd_width_3:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .active .bd_width_4:before,
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .active .bd_width_5:before {
+	border-color: #157efb;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_1:before {
+	border-top-width: 1px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_2:before {
+	border-top-width: 2px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_3:before {
+	border-top-width: 3px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_4:before {
+	border-top-width: 4px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .bd_width_5:before {
+	border-top-width: 5px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .dropdown_layer {
+	display: none;
+	left: 0;
+	right: 0;
+	top: 22px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .dropdown_layer a {
+	height: 23px;
+	line-height: 23px;
+	padding: 0 7px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover .dropdown_layer a:hover {
+	background-color: #fafafa;
+}
+
+.workseditor-classic .table_generator .table_setting_option .border_width_cover.open .dropdown_layer {
+	display: block;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover {
+	display: block;
+	position: relative;
+	line-height: 24px;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover input {
+	display: none;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover .current_color {
+	border: 0;
+	width: 100%;
+	height: 24px;
+	min-width: 0;
+	vertical-align: top;
+	position: relative;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover .current_color:before, .workseditor-classic .table_generator .table_setting_option .color_picker_cover .current_color:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 4px solid #fff;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover .current_color:before {
+	border: 1px solid #e5e5e5;
+	z-index: 10;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover .color_picker {
+	display: none;
+	left: 100%;
+	top: 0;
+}
+
+.workseditor-classic .table_generator .table_setting_option .color_picker_cover.open .color_picker {
+	display: block;
+}
+
+.workseditor-classic .table_generator .tb_option_item {
+	position: relative;
+	display: table-row;
+}
+
+.workseditor-classic .fn_signature ul {
+	font-size: 14px;
+	padding: 12px 0;
+	max-height: 328px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.workseditor-classic .fn_signature a {
+	display: block;
+	line-height: 1.2;
+	padding: 8px 20px;
+	min-width: 140px;
+	color: #222;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.workseditor-classic .fn_signature a:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+}
+
+.workseditor-classic .fn_signature .active a {
+	color: #157efb;
+	font-weight: bold;
+}
+
+.workseditor-classic .fn_signature .dropdown_layer {
+	right: 0;
+	left: auto;
+}
+
+.workseditor-classic .fn_signature .dropdown_layer ul {
+	font-size: 12px;
+	padding: 12px 0;
+}
+
+.workseditor-classic .fn_signature .dropdown_layer a {
+	min-width: 80px;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.workseditor-classic .attach_sticker .dropdown_layer {
+	left: auto;
+	right: 0;
+}
+
+.workseditor-classic .attach_video .dropdown_layer {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	left: auto;
+	right: 0;
+	min-width: 180px;
+	padding: 8px 0;
+}
+
+.workseditor-classic .attach_video .dropdown_layer ul a {
+	display: block;
+	padding: 8px 12px;
+	line-height: 1.2;
+	font-size: 14px;
+	color: #222;
+	text-decoration: none !important;
+}
+
+.workseditor-classic .attach_video .dropdown_layer ul a:hover {
+	background-color: #f3f3f3;
+}
+
+.workseditor-classic .attach_video .dropdown_layer ul:after {
+	display: block;
+	width: 100%;
+	height: 1px;
+	margin: 8px 0;
+	background-color: #e5e5e6;
+	content: '';
+}
+
+.workseditor-classic .attach_video .dropdown_layer .support_format {
+	display: block;
+	padding: 2px 12px;
+	color: #989898;
+}
+
+.workseditor-classic .layer_edit_table {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	z-index: 30;
+	width: auto;
+	right: auto;
+}
+
+.workseditor-classic .layer_edit_table .table_setting_option {
+	display: table;
+	width: 100%;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_tit {
+	min-width: 64px;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover {
+	min-width: 104px;
+	padding-bottom: 5px;
+}
+
+.en_US .workseditor-classic .layer_edit_table .tb_option_item .ipt_cover {
+	min-width: 130px;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button {
+	border: 1px solid #e5e5e5;
+	padding: 0 6px;
+	height: 25px;
+	line-height: 25px;
+	min-width: 52px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-align: left;
+	color: #666;
+	font-size: 12px;
+	float: left;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button:first-child {
+	border-right-width: 0;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button:only-child {
+	width: 100%;
+	border-right-width: 1px;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button .ico {
+	vertical-align: middle;
+	margin-right: 6px;
+	position: relative;
+	top: -1px;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button.disabled, .workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button[disabled="disabled"], .workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button[disabled] {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	cursor: default;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover button.current_width {
+	border-right-width: 1px;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .cell_merge .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -234px -325px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .split_row .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -263px -234px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .split_col .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -240px -211px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .insert_row .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -309px -280px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .insert_col .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -286px -257px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .remove_row .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -4px -210px;
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	margin-right: 3px;
+	top: 0;
+}
+
+.workseditor-classic .layer_edit_table .tb_option_item .ipt_cover .remove_col .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -28px -210px;
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	margin-right: 3px;
+	top: 0;
+}
+
+.workseditor-classic .layer_edit_table .layout_option {
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.workseditor-classic .layer_context_option {
+	position: absolute;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #dadada;
+	z-index: 20;
+	min-width: 130px;
+}
+
+.workseditor-classic .layer_context_option ul {
+	font-size: 14px;
+	padding: 12px 0;
+	max-height: 328px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.workseditor-classic .layer_context_option a {
+	display: block;
+	line-height: 1.2;
+	padding: 8px 20px;
+	min-width: 140px;
+	color: #222;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.workseditor-classic .layer_context_option a:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+}
+
+.workseditor-classic .layer_context_option .active a {
+	color: #157efb;
+	font-weight: bold;
+}
+
+.workseditor-classic .layer_context_option ul {
+	font-size: 12px;
+}
+
+.workseditor-classic .layer_context_option a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width: 0;
+}
+
+.workseditor-classic .layer_video_notification {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: absolute;
+	min-width: 180px;
+	z-index: 30;
+	padding: 16px 32px 16px 16px;
+	border: 1px solid #157efb;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	background-color: #157efb;
+}
+
+.workseditor-classic .layer_video_notification:before {
+	position: absolute;
+	top: -9px;
+	right: 11px;
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -162px -134px;
+	width: 16px;
+	height: 9px;
+	display: inline-block;
+}
+
+.workseditor-classic .layer_video_notification em {
+	font-size: 14px;
+	color: #fff;
+	line-height: 1.43;
+}
+
+.workseditor-classic .layer_video_notification .close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	line-height: 0;
+	border: 0;
+}
+
+.workseditor-classic .layer_video_notification .close .ico_close {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1d48d7f5.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_icons_1063658c.svg);
+	background-size: 367px 344px;
+	background-position: -255px -325px;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+}
+
+.workseditor-classic .ly_works_sticker {
+	width: 460px;
+	background-color: #fff;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st {
+	padding: 10px 24px;
+	border-bottom: 1px solid #ebebeb;
+	overflow: hidden;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st ul {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+	position: relative;
+	font-size: 0;
+	float: none;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s left;
+	transition: 0.3s left;
+}
+
+@supports (display: flex) {
+	.workseditor-classic .ly_works_sticker .cate_st ul {
+		font-size: inherit;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+	}
+}
+
+.workseditor-classic .ly_works_sticker .cate_st li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 4px;
+	float: none;
+	position: relative;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st li button {
+	width: 48px;
+	height: 34px;
+	border-radius: 1px;
+	border: 1px solid transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st li button:hover {
+	border-color: #dcdde2;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st li.selected button {
+	background-color: #eff0f3;
+	border-color: #c4c7ce;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st li:first-child {
+	margin-left: 0;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .ico_ani {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .ico_ani:before {
+	content: '';
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_62a4932f.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-size: 74px 48px;
+	background-position: -4px -4px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next,
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev {
+	position: absolute;
+	top: 0;
+	border: 0;
+	padding: 20px 4px 20px;
+	width: auto;
+	height: auto;
+	background-image: none;
+	background-color: #fff;
+	line-height: 0;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next .ico,
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev .ico {
+	visibility: visible;
+	position: static;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev {
+	left: 0;
+	padding-left: 12px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_62a4932f.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-size: 74px 48px;
+	background-position: -30px -4px;
+	width: 8px;
+	height: 14px;
+	display: inline-block;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev:hover .ico {
+	background-position: -4px -30px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev[disabled="disabled"] .ico, .workseditor-classic .ly_works_sticker .cate_st .btn_cate_prev.disabled .ico {
+	background-position: -46px -4px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next {
+	right: 0;
+	padding-right: 12px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next .ico {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_62a4932f.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_stickers_73218eb9.svg);
+	background-size: 74px 48px;
+	background-position: -20px -30px;
+	width: 8px;
+	height: 14px;
+	display: inline-block;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next:hover .ico {
+	background-position: -62px -4px;
+}
+
+.workseditor-classic .ly_works_sticker .cate_st .btn_cate_next[disabled="disabled"] .ico, .workseditor-classic .ly_works_sticker .cate_st .btn_cate_next.disabled .ico {
+	background-position: -36px -30px;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker {
+	padding: 2px 0 2px 4px;
+	height: 285px;
+	overflow: auto;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker ul {
+	overflow: hidden;
+	margin: 0;
+	display: block;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker ul.focus li {
+	opacity: 0.3;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker ul.focus li.focusin {
+	opacity: 1;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker ul.focus button:before {
+	display: none;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker li {
+	float: left;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker button {
+	border: 0;
+	width: 108px;
+	height: 100px;
+	border: 1px solid transparent;
+	background-repeat: no-repeat;
+	vertical-align: top;
+	position: relative;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker button:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker button:hover:before {
+	border: 1px solid #dcdde2;
+	border-radius: 2px;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker.type_emoji ul {
+	padding-left: 12px;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker.type_emoji li {
+	padding: 8px 6px;
+}
+
+.workseditor-classic .ly_works_sticker .list_sticker.type_emoji button {
+	width: 41px;
+	height: 41px;
+}
+
+.workseditor-classic .ly_works_sticker.expand {
+	width: 670px;
+}
+
+.workseditor-classic .ly_works_sticker.expand .list_sticker.type_emoji li {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.workseditor-classic .editor_head,
+.workseditor-classic .editor_body {
+	border-left: 0;
+	border-right: 0;
+}
+
+.workseditor-classic.drag_in .editor_head {
+	border-bottom-color: rgba(0, 115, 230, 0.5);
+}
+
+.workseditor-classic.drag_in .editor_body {
+	border: 1px solid rgba(0, 115, 230, 0.5);
+	border-top: 0;
+}
+
+.workseditor-classic.drag_in .editor_footer .editor_mode_select {
+	border-top: 1px solid rgba(0, 115, 230, 0.5);
+}
+
+.workseditor-classic .editor_head {
+	padding-left: 21px;
+	border-color: rgba(48, 48, 56, 0.17);
+	background-color: rgba(230, 230, 234, 0.3);
+}
+
+.workseditor-classic .ft_size .btn_prev_item,
+.workseditor-classic .ft_size .btn_next_item,
+.workseditor-classic .ft_family .btn_prev_item,
+.workseditor-classic .ft_family .btn_next_item {
+	padding: 9px 10px 3px 9px;
+}
+
+.workseditor-classic .ft_size .btn_prev_item .ico:before,
+.workseditor-classic .ft_family .btn_prev_item .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -152px -51px;
+	width: 7px;
+	height: 4px;
+	display: inline-block;
+}
+
+.workseditor-classic .ft_size .btn_prev_item:hover .ico:before,
+.workseditor-classic .ft_family .btn_prev_item:hover .ico:before {
+	background-position: -152px -51px;
+}
+
+.workseditor-classic .ft_size .btn_prev_item.disabled i.ico:before, .workseditor-classic .ft_size .btn_prev_item[disabled] i.ico:before, .workseditor-classic .ft_size .btn_prev_item[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item.disabled i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item[disabled] i.ico:before,
+.workseditor-classic .ft_family .btn_prev_item[disabled="disabled"] i.ico:before {
+	background-position: -152px -51px;
+}
+
+.workseditor-classic .ft_size .btn_next_item,
+.workseditor-classic .ft_family .btn_next_item {
+	padding-top: 3px;
+	padding-bottom: 9px;
+}
+
+.workseditor-classic .ft_size .btn_next_item .ico:before,
+.workseditor-classic .ft_family .btn_next_item .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -152px -27px;
+	width: 7px;
+	height: 4px;
+	display: inline-block;
+}
+
+.workseditor-classic .ft_size .btn_next_item:hover .ico:before,
+.workseditor-classic .ft_family .btn_next_item:hover .ico:before {
+	background-position: -152px -27px;
+}
+
+.workseditor-classic .ft_size .btn_next_item.disabled i.ico:before, .workseditor-classic .ft_size .btn_next_item[disabled] i.ico:before, .workseditor-classic .ft_size .btn_next_item[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_family .btn_next_item.disabled i.ico:before,
+.workseditor-classic .ft_family .btn_next_item[disabled] i.ico:before,
+.workseditor-classic .ft_family .btn_next_item[disabled="disabled"] i.ico:before {
+	background-position: -152px -27px;
+}
+
+.workseditor-classic .btn_wrap.open .btn_tool_option .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -152px -39px;
+	width: 7px;
+	height: 4px;
+	display: inline-block;
+}
+
+.workseditor-classic .btn_tool_option {
+	padding: 15px 4px 14px;
+}
+
+.workseditor-classic .btn_tool_option .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -152px -27px;
+	width: 7px;
+	height: 4px;
+	display: inline-block;
+}
+
+.workseditor-classic .btn_tool_option:hover .ico:before {
+	background-position: -152px -27px;
+}
+
+.workseditor-classic .btn_tool_option.disabled i.ico:before, .workseditor-classic .btn_tool_option[disabled] i.ico:before, .workseditor-classic .btn_tool_option[disabled="disabled"] i.ico:before {
+	background-position: -152px -27px;
+}
+
+.workseditor-classic .deco_bold .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -50px -75px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .deco_bold .btn_tool:hover .ico:before {
+	background-position: -50px -75px;
+}
+
+.workseditor-classic .deco_bold .btn_tool.disabled i.ico:before, .workseditor-classic .deco_bold .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_bold .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -50px -75px;
+}
+
+.workseditor-classic .deco_bold .btn_tool.active .ico:before {
+	background-position: -73px -75px;
+}
+
+.workseditor-classic .deco_italic .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -106px -73px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .deco_italic .btn_tool:hover .ico:before {
+	background-position: -106px -73px;
+}
+
+.workseditor-classic .deco_italic .btn_tool.disabled i.ico:before, .workseditor-classic .deco_italic .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_italic .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -106px -73px;
+}
+
+.workseditor-classic .deco_italic .btn_tool.active .ico:before {
+	background-position: -4px -98px;
+}
+
+.workseditor-classic .deco_underline .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -73px -98px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .deco_underline .btn_tool:hover .ico:before {
+	background-position: -73px -98px;
+}
+
+.workseditor-classic .deco_underline .btn_tool.disabled i.ico:before, .workseditor-classic .deco_underline .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_underline .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -73px -98px;
+}
+
+.workseditor-classic .deco_underline .btn_tool.active .ico:before {
+	background-position: -96px -98px;
+}
+
+.workseditor-classic .deco_strike .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -27px -98px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .deco_strike .btn_tool:hover .ico:before {
+	background-position: -27px -98px;
+}
+
+.workseditor-classic .deco_strike .btn_tool.disabled i.ico:before, .workseditor-classic .deco_strike .btn_tool[disabled] i.ico:before, .workseditor-classic .deco_strike .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -27px -98px;
+}
+
+.workseditor-classic .deco_strike .btn_tool.active .ico:before {
+	background-position: -50px -98px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool .ico:before,
+.workseditor-classic .ft_color .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -106px -4px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool:hover .ico:before,
+.workseditor-classic .ft_color .btn_tool:hover .ico:before {
+	background-position: -106px -4px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool.disabled i.ico:before, .workseditor-classic .ft_bgcolor .btn_tool[disabled] i.ico:before, .workseditor-classic .ft_bgcolor .btn_tool[disabled="disabled"] i.ico:before,
+.workseditor-classic .ft_color .btn_tool.disabled i.ico:before,
+.workseditor-classic .ft_color .btn_tool[disabled] i.ico:before,
+.workseditor-classic .ft_color .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -106px -4px;
+}
+
+.workseditor-classic .ft_color .btn_tool.active .ico:before {
+	background-position: -106px -27px;
+}
+
+.workseditor-classic .ft_bgcolor .btn_tool.reverse .ico:before {
+	background-position: -106px -50px;
+}
+
+.workseditor-classic .align .align_left .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -129px -50px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .align .align_left:hover .ico:before {
+	background-position: -129px -50px;
+}
+
+.workseditor-classic .align .align_left.disabled i.ico:before, .workseditor-classic .align .align_left[disabled] i.ico:before, .workseditor-classic .align .align_left[disabled="disabled"] i.ico:before {
+	background-position: -129px -50px;
+}
+
+.workseditor-classic .align .align_left.active .ico:before {
+	background-position: -129px -73px;
+}
+
+.workseditor-classic .list_style .lst_none .ico:before,
+.workseditor-classic .list_style .lst_bigcircle .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -129px -96px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .list_style .lst_none:hover .ico:before,
+.workseditor-classic .list_style .lst_bigcircle:hover .ico:before {
+	background-position: -129px -96px;
+}
+
+.workseditor-classic .list_style .lst_none.disabled i.ico:before, .workseditor-classic .list_style .lst_none[disabled] i.ico:before, .workseditor-classic .list_style .lst_none[disabled="disabled"] i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle.disabled i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle[disabled] i.ico:before,
+.workseditor-classic .list_style .lst_bigcircle[disabled="disabled"] i.ico:before {
+	background-position: -129px -96px;
+}
+
+.workseditor-classic .list_style .lst_none.active .ico:before,
+.workseditor-classic .list_style .lst_bigcircle.active .ico:before {
+	background-position: -4px -121px;
+}
+
+.workseditor-classic .text_indent .indent .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -73px -121px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .text_indent .indent:hover .ico:before {
+	background-position: -73px -121px;
+}
+
+.workseditor-classic .text_indent .indent.disabled i.ico:before, .workseditor-classic .text_indent .indent[disabled] i.ico:before, .workseditor-classic .text_indent .indent[disabled="disabled"] i.ico:before {
+	background-position: -73px -121px;
+}
+
+.workseditor-classic .text_indent .indent.active .ico:before {
+	background-position: -152px -4px;
+}
+
+.workseditor-classic .text_indent .outdent .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -96px -121px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .text_indent .outdent:hover .ico:before {
+	background-position: -96px -121px;
+}
+
+.workseditor-classic .text_indent .outdent.disabled i.ico:before, .workseditor-classic .text_indent .outdent[disabled] i.ico:before, .workseditor-classic .text_indent .outdent[disabled="disabled"] i.ico:before {
+	background-position: -96px -121px;
+}
+
+.workseditor-classic .text_indent .outdent.active .ico:before {
+	background-position: -119px -121px;
+}
+
+.workseditor-classic .line_height .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -27px -121px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .line_height .btn_tool:hover .ico:before {
+	background-position: -27px -121px;
+}
+
+.workseditor-classic .line_height .btn_tool.disabled i.ico:before, .workseditor-classic .line_height .btn_tool[disabled] i.ico:before, .workseditor-classic .line_height .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -27px -121px;
+}
+
+.workseditor-classic .line_height .btn_tool.active .ico:before {
+	background-position: -50px -121px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -50px -52px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool:hover .ico:before {
+	background-position: -50px -52px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool.disabled i.ico:before, .workseditor-classic .fn_clearformat .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_clearformat .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -50px -52px;
+}
+
+.workseditor-classic .fn_clearformat .btn_tool.active .ico:before {
+	background-position: -83px -4px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -83px -27px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_symbols .btn_tool:hover .ico:before {
+	background-position: -83px -27px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool.disabled i.ico:before, .workseditor-classic .fn_symbols .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_symbols .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -83px -27px;
+}
+
+.workseditor-classic .fn_symbols .btn_tool.active .ico:before {
+	background-position: -83px -50px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -4px -52px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool:hover .ico:before {
+	background-position: -4px -52px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool.disabled i.ico:before, .workseditor-classic .fn_hyperlink .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_hyperlink .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -4px -52px;
+}
+
+.workseditor-classic .fn_hyperlink .btn_tool.active .ico:before {
+	background-position: -27px -52px;
+}
+
+.workseditor-classic .fn_table .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -4px -75px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_table .btn_tool:hover .ico:before {
+	background-position: -4px -75px;
+}
+
+.workseditor-classic .fn_table .btn_tool.disabled i.ico:before, .workseditor-classic .fn_table .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_table .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -4px -75px;
+}
+
+.workseditor-classic .fn_table .btn_tool.active .ico:before {
+	background-position: -27px -75px;
+}
+
+.workseditor-classic .fn_translate .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -4px -27px;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_translate .btn_tool:hover .ico:before {
+	background-position: -4px -27px;
+}
+
+.workseditor-classic .fn_translate .btn_tool.disabled i.ico:before, .workseditor-classic .fn_translate .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_translate .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -4px -27px;
+}
+
+.workseditor-classic .fn_signature .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -60px -4px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .fn_signature .btn_tool:hover .ico:before {
+	background-position: -60px -4px;
+}
+
+.workseditor-classic .fn_signature .btn_tool.disabled i.ico:before, .workseditor-classic .fn_signature .btn_tool[disabled] i.ico:before, .workseditor-classic .fn_signature .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -60px -4px;
+}
+
+.workseditor-classic .fn_signature .btn_tool.active .ico:before {
+	background-position: -60px -27px;
+}
+
+.workseditor-classic .capture_editor .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -4px -4px;
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .capture_editor .btn_tool:hover .ico:before {
+	background-position: -4px -4px;
+}
+
+.workseditor-classic .capture_editor .btn_tool.disabled i.ico:before, .workseditor-classic .capture_editor .btn_tool[disabled] i.ico:before, .workseditor-classic .capture_editor .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -4px -4px;
+}
+
+.workseditor-classic .capture_editor .btn_tool.active .ico:before {
+	background-position: -32px -4px;
+}
+
+.workseditor-classic .attach_image .btn_tool .ico:before {
+	background-image: url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_644c22bc.png);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-image: linear-gradient(transparent, transparent), url(https://static.worksmobile.net/static/pwe/wm/weditor/sp_editor_naver_d9ca9304.svg);
+	background-size: 171px 140px;
+	background-position: -29px -27px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.workseditor-classic .attach_image .btn_tool:hover .ico:before {
+	background-position: -29px -27px;
+}
+
+.workseditor-classic .attach_image .btn_tool.disabled i.ico:before, .workseditor-classic .attach_image .btn_tool[disabled] i.ico:before, .workseditor-classic .attach_image .btn_tool[disabled="disabled"] i.ico:before {
+	background-position: -29px -27px;
+}
+
+.workseditor-classic .fn_symbols,
+.workseditor-classic .fn_hyperlink,
+.workseditor-classic .fn_table {
+	position: static;
+}
+
+.workseditor-classic .fn_symbols .dropdown_layer,
+.workseditor-classic .fn_hyperlink .dropdown_layer {
+	right: -1px;
+}
+
+.workseditor-classic .editor_footer.non_resizable {
+	border-right: 0;
+	border-left: 0;
+}
