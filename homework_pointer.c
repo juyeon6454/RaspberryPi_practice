@@ -51,10 +51,15 @@ int main(int argc, char *argv[])
 
 	for(int i = 0; i < imagesize; i+=elemsize)
 	{
-			outimg[i+0] = inimg[i+0];
-			outimg[i+1] = inimg[i+1];
-			outimg[i+2] = inimg[i+2];
+			//outimg[i+0] = inimg[i+0];
+			//outimg[i+1] = inimg[i+1];
+			//outimg[i+2] = inimg[i+2];
+			*(outimg+i+0) =*(inimg+i+0);
+		    *(outimg+i+1) =*(inimg+i+1);
+			*(outimg+i+2) =*(inimg+i+2);
+			
 	}
+	
 
 	if((fp = fopen(*(argv+2),"wb"))== NULL)
 	{
