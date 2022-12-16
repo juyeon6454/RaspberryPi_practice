@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 	BITMAPFILEHEADER bmpFileHeader;
 	BITMAPINFOHEADER bmpInfoHeader;
 	RGBQUAD *palrgb;
+
 	if(argc!=3)
 	{
 		fprintf(stderr, "Usgae : Fail to file open\n");
@@ -37,27 +38,53 @@ int main(int argc, char **argv)
 	fread(inimg, sizeof(UBYTE), imagesize, fp);
 	fclose(fp);
 
-
 	printf("width : %d , height : %d , imagesize : %d ", bmpInfoHeader.biWidth, bmpInfoHeader.biHeight, imagesize);
 
-	for(int i = 0; i < 256 ; i ++){
+	for(int x = 0; x < 256 ; x ++){
 		
-		
-		
-		
-		grayimg[i+0] = grayimg[i+1] = grayimg[i+2] =(r*0.3F)+(g*0.59F)+(b*0.11F);
+		palrgb[x].rgbBlue = palrgb[x].rgbGreen = palrgb[x].rgbRed = x;	
 	}
+
 	for(int i = 0; i < imagesize; i+=elemsize)
 	{
-			//outimg[i+0] = inimg[i+0];
-			//outimg[i+1] = inimg[i+1];
-			//outimg[i+2] = inimg[i+2];
-			//*(outimg+i+0) =*(inimg+i+0);
-			//*(outimg+i+1) =*(inimg+i+1);
-			//*(outimg+i+2) =*(inimg+i+2);
-			UBYTE b = *(inimg+i+0);
-	        UBYTE g = *(inimg+i+1);
-	        UBYTE r = *(inimg+i+2);
+			UBYTE b = (float)*(inimg+i+0);
+	        UBYTE g = (float)*(inimg+i+1);
+	        UBYTE r = (float)*(inimg+i+2);
+			
+			grayimg[i+0] = grayimg[i+1] = grayimg[i+2] =(r*0.3F)+(g*0.59F)+(b*0.11F);
+	}
+
+	int padsize = (bmpInfoHeader.biWidth+2)  * elemsize;
+	int addsize = padsize + (bmpInfoHeader.biHeight * elemsize);
+	
+	padimg = (UBYTE*)malloc(sizeof(UBYTE)*(imagesize + addsize));
+	
+	memset (padimg, 0 , sizeof(UBYTE)*(imagesize + addsize));
+	for(int y = 0; y < bmpInfoHeader.biHeight; y++) {
+			for (int x = 0; x < size; x += elemsize)
+			{
+				padimg[(x+elemsize)+(y+1)*imagesize+0]=grayimg[x+y*imagesize+0];
+				padimg[(x+elemsize)+(y+1)*imagesize+1]=grayimg[x+y*imagesize+1];
+				padimg[(x+elemsize)+(y+1)*imagesize+2]=grayimg[x+y*imagesize+2];
+
+			}
+	}
+
+	//for(y = 0; y < bmpInfoHeader.biHeight; y++) {
+	//		for(z=0; z<elemsize; z++)
+	//		{
+	//			padimg[0+(y+1)*bmpInfoHeader.biHeight*elemsize+z] = grayimg[0+y*bmpInfoHeader.biHeight*elemsize+z];//height*elemsize instead padsize/size?
+	//			padimg[(padsize-elemsize)+(y+1)*bmpInfoHeader.biHeight*elemsize+z] = grayimg[(size-elemsize)+y*bmpInfoHeader.biHeight*elemsize];
+	//		}
+	//}
+
+	//for(x = 0; x < size; x += elemsize){
+	//		for(z=0; z<elemsize; z++)
+	//{
+	//		padimg[x+elemsize+size+z] = grayimg[x+size+z];
+	//		padimg[x+elemsize+bmpInfoHeader.biHeightpadsize-
+	//}
+	//}
 
 	if((fp = fopen(argv[2],"wb"))== NULL)
 	{
@@ -65,18 +92,17 @@ int main(int argc, char **argv)
 			return -1;
 	}
 
-
-
+	
 	fwrite(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 	fwrite(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
 
 	
 	bmpFileHeader.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + sizeof(RGBQUAD)*256;
 	//bmpFileHeader.bfSize = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + sizeof(RGBQUAD)*256 + sizeof(UBYTE)*imagesize;
-	fwrite(outimg, sizeof(UBYTE), imagesize, fp);
+	fwrite(padimg, sizeof(UBYTE), imagesize + addsize, fp);
 	fwrite(palrgb, sizeof(RGBQUAD)*256, 1, fp);
 	free(inimg);
-	free(outimg);
+	free(padimg);
 	free(palrgb);
 	fclose(fp);
 
