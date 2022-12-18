@@ -91,7 +91,8 @@ int main(int argc, char **argv)
 			fprintf(stderr, "File open fail\n");
 			return -1;
 	}
-
+	bmpFileHeader.bfOffBits = sizeof(bmpInfoHeader) + sizeof(bmpFileHeader) + sizeof(palrgb)*256;
+	bmpInfoHeader.biClrUsed = 0;
 	
 	fwrite(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 	fwrite(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
