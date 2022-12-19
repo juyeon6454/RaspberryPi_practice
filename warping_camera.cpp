@@ -70,7 +70,7 @@ int main()
 	Mat cameraMatrix, distCoeffs;
 	Mat undistorted;
 
-	Mat image = imread("../image/chessboard_05.jpg", 1);
+	Mat image = imread("./chessboard_05.jpg", 1);
 	CV_Assert(image.data);
 
 	double rms = calibrateCamera(objectPoints, imagePoints, image.size(),
