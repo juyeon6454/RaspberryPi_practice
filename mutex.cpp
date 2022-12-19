@@ -5,7 +5,7 @@
 using namespace std;
 
 int value = 0;
-mutext value_mutex;
+mutex value_mutex;
 
 void increase_value()
 {
