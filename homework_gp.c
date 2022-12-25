@@ -18,13 +18,13 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Usgae : Fail to file open\n");
 		return -1;
 	}
-
+	printf("1");
 	if((fp = fopen(argv[1],"rb"))==NULL)
 	{
 			fprintf(stderr, "Usage : Fail to file open\n");
 			return -1;
 	}
-
+	printf("2");
 	fread(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 	fread(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
 	int elemsize = bmpInfoHeader.biBitCount/8;
@@ -39,13 +39,7 @@ int main(int argc, char **argv)
 	fclose(fp);
 
 	printf("width : %d , height : %d , imagesize : %d ", bmpInfoHeader.biWidth, bmpInfoHeader.biHeight, imagesize);
-
-	for(int x = 0; x < 256 ; x ++){
-		
-		palrgb[x].rgbBlue = palrgb[x].rgbGreen = palrgb[x].rgbRed = x;	
-	}
-
-	for(int i = 0; i < imagesize; i+=elemsize)
+	for(int i = 0; i = imagesize; i += elemsize)
 	{
 			UBYTE b = (float)*(inimg+i+0);
 	        UBYTE g = (float)*(inimg+i+1);
@@ -53,6 +47,12 @@ int main(int argc, char **argv)
 			
 			grayimg[i+0] = grayimg[i+1] = grayimg[i+2] =(r*0.3F)+(g*0.59F)+(b*0.11F);
 	}
+
+	for(int x = 0; x < 256 ; x ++){
+		                                                             	
+		palrgb[x].rgbBlue = palrgb[x].rgbGreen = palrgb[x].rgbRed = x;
+	}
+
 
 	int padsize = (bmpInfoHeader.biWidth+2)  * elemsize;
 	int addsize = padsize + (bmpInfoHeader.biHeight * elemsize);
@@ -97,12 +97,12 @@ int main(int argc, char **argv)
 	fwrite(&bmpFileHeader, sizeof(bmpFileHeader), 1, fp);
 	fwrite(&bmpInfoHeader, sizeof(bmpInfoHeader), 1, fp);
 
-	
-	bmpFileHeader.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + sizeof(RGBQUAD)*256;
+	fwrite(grayimg, sizeof(UBYTE), imagesize,fp);	
 	//bmpFileHeader.bfSize = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + sizeof(RGBQUAD)*256 + sizeof(UBYTE)*imagesize;
 	fwrite(padimg, sizeof(UBYTE), imagesize + addsize, fp);
 	fwrite(palrgb, sizeof(RGBQUAD)*256, 1, fp);
 	free(inimg);
+	free(grayimg);
 	free(padimg);
 	free(palrgb);
 	fclose(fp);
