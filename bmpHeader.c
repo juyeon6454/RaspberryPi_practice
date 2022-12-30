@@ -27,7 +27,7 @@ int readBmp(char *filename, unsigned char **data, int *cols, int *rows)
     fread(&bmpHeader.bfSize, sizeof(unsigned int), 1, fp);
     fread(&bmpHeader.bfReserved1, sizeof(unsigned short int), 1, fp);
     fread(&bmpHeader.bfReserved2, sizeof(unsigned short int), 1, fp);
-    fread(&bmpHeader.bf0ffBits, sizeof(unsigned int), 1, fp);
+    fread(&bmpHeader.bfOffBits, sizeof(unsigned int), 1, fp);
 
     /* BITMAPINFOHEADER 구조체의 데이터 */
     fread(&bmpInfoHeader.biSize, sizeof(unsigned int), 1, fp);
@@ -56,8 +56,8 @@ int readBmp(char *filename, unsigned char **data, int *cols, int *rows)
     printf("Bit Count : %d\n", bmpInfoHeader.biBitCount);
 
     /* 실제 이미지 데이터가 있는 위치를 계산해서 가져온다. */
-    fseek(fp, bmpHeader.bf0ffBits, SEEK_SET);
-    fread(*data, 1, bmpHeader.bfSize-bmpHeader.bf0ffBits, fp);
+    fseek(fp, bmpHeader.bfOffBits, SEEK_SET);
+    fread(*data, 1, bmpHeader.bfSize-bmpHeader.bfOffBits, fp);
 
     fclose(fp);                                              /* 사용이 끝난 이미지 파일을 닫는다. */
 
