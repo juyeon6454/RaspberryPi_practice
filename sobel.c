@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     fread(inimg, sizeof(ubyte), imageSize, fp); 
 	grayimg = (ubyte*)malloc(sizeof(ubyte)*imageSize);
     fclose(fp);
-	printf("62 : imageSize : %d\n",imageSize);
+	printf("65 : imageSize : %d\n",imageSize);
 
 	   	for(int i = 0; i < imageSize; i+=elemSize) {
 		 ubyte r = (float)inimg[i+0];
